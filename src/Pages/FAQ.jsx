@@ -1,0 +1,10 @@
+import React from 'react'
+
+export default function FAQ() {
+  return (
+    <>
+      <h1> Welcome to FAQ </h1>
+      
+    </>
+  )
+}
