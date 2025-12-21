@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import viteLogo from "../../assets/vite.jpeg";
+import Logo from "../../assets/Logo.jpeg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,18 +27,13 @@ export default function Navbar() {
         <nav className="flex items-center justify-between px-4 sm:px-8 py-1">
           <Link
             to="/"
-            className="flex items-center hover:bg-indigo-6000 transition"
+            className="flex items-center hover:opacity-90 transition"
           >
-            <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-indigo-100 rounded-full text-indigo-600 mr-2 overflow-hidden">
-              <img
-                src={viteLogo}
-                alt="Zeenopay Logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <span className="text-xl sm:text-2xl font-bold text-indigo-500 italic transition p-2 rounded-lg hover:bg-indigo-50">
-              ZeenoPay
-            </span>
+            <img
+              src={Logo}
+              alt="Zeenopay"
+              className="h-14 sm:h-14 w-auto rounded-lg"
+            />
           </Link>
 
           <div className="hidden lg:flex  gap-3 items-center space-x-6 font-medium text-gray-700">

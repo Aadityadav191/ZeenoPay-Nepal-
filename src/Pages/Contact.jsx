@@ -4,7 +4,11 @@ import ContactForm from "../Components/Forms/ContactForm";
 
 export default function Home() {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0, 
+      left: 0, 
+      behavior: "smooth", 
+    });
   }, []);
   
   return (
