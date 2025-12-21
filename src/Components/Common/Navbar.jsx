@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <>
       <div className="w-full font-sans bg-white shadow-lg sticky top-0 z-50">
-        <div className="hidden md:flex justify-between items-center py-2.5 px-4 sm:px-8 border-b border-gray-200 text-sm text-gray-600">
+        {/* <div className="hidden md:flex justify-between items-center py-2.5 px-4 sm:px-8 border-b border-gray-200 text-sm text-gray-600">
           <div className="flex items-center space-x-6 font-medium">
             <p>+977 9821747900</p>
             <p>+977 9821747900</p>
@@ -22,7 +22,7 @@ export default function Navbar() {
               COST CALCULATOR
             </a>
           </Link>
-        </div>
+        </div> */}
 
         <nav className="flex items-center justify-between px-4 sm:px-8 py-1">
           <Link
@@ -36,27 +36,58 @@ export default function Navbar() {
             />
           </Link>
 
-          <div className="hidden lg:flex  gap-3 items-center space-x-6 font-medium text-gray-700">
-            <Link to="/about" className="hover:text-indigo-600 transition">
+          <div className="hidden lg:flex  gap-0 items-center space-x-1 font-medium text-gray-700">
+            <Link
+              to="/about"
+              className="hover:text-indigo-600 hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+            >
               About
             </Link>
-            <Link to="/Contact" className="hover:text-indigo-600 transition">
+            <Link
+              to="/Contact"
+              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+            >
               Contact
             </Link>
-            <Link to="/Blog" className="hover:text-indigo-600 transition">
+            <Link
+              to="/Blog"
+              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+            >
               Blog
             </Link>
+
             <Link
-              to="/Recommended Websites"
-              className="hover:text-indigo-600 transition"
+              to="/about"
+              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
             >
-              Recommended Websites
+              Guides
+            </Link>
+            <Link
+              to="/Contact"
+              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+            >
+              FAQ
+            </Link>
+            <Link
+              to="/Blog"
+              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+            >
+              Returns & Refunds
+            </Link>
+            <Link
+              to="/COST CALCULATOR"
+              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+            >
+              Cost Calculator
             </Link>
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
             <Link to="/create-order">
-              <button className="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-[#36b6ff] rounded-full shadow-md hover:bg-indigo-600 transition duration-300">
+              <button
+                className="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white 
+                           bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-full shadow-md transition duration-300  hover:from-indigo-600 hover:to-[#36b6ff]"
+              >
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -117,11 +148,9 @@ export default function Navbar() {
           className={`${
             isOpen ? "max-h-screen opacity-100 py-2" : "max-h-0 opacity-0"
           } lg:hidden overflow-hidden transition-all duration-300 ease-in-out`}
-          // Optional: Add hidden class back for accessibility if max-h-0 is not sufficient
           aria-hidden={!isOpen}
         >
           <div className="flex flex-col space-y-3 px-4">
-            {/* Action Buttons (Primary/Secondary) */}
             <Link to="/create-order" className="w-full" onClick={closeMenu}>
               <button className="flex items-center justify-center w-full gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition">
                 <svg
@@ -199,11 +228,11 @@ export default function Navbar() {
               Returns & Refunds
             </Link>
             <Link
-              to="/Recommended Websites"
+              to="/Cost Calculator"
               onClick={closeMenu}
               className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
             >
-              Recommended Websites
+              Cost Calculator
             </Link>
 
             <hr className="border-gray-200 mt-2 mb-2" />

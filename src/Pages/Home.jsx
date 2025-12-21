@@ -14,7 +14,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center px-6 py-20 text-center md:py-32 bg-gray-50">
         <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-6xl">
-          Welcome to <span className="text-indigo-600">ZeenoPay Nepal 🫰 </span>
+          Welcome to <span className="text-[#36b3fe]">ZeenoPay Nepal 🫰 </span>
         </h1>
         <p className="mt-6 text-lg text-gray-600 max-w-2xl">
           Zeenopay Nepal is your reliable partner for seamless international
