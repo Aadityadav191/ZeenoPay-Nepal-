@@ -56,7 +56,7 @@ export default function Navbar() {
 
           <div className="hidden lg:flex items-center gap-4">
             <Link to="/create-order">
-              <button className="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-indigo-500 rounded-full shadow-md hover:bg-indigo-600 transition duration-300">
+              <button className="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-[#36b6ff] rounded-full shadow-md hover:bg-indigo-600 transition duration-300">
                 <svg
                   className="w-4 h-4"
                   fill="none"
