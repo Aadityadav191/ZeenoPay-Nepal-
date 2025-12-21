@@ -9,6 +9,7 @@ import About from "../Pages/About";
 import FAQ from "../Pages/FAQ";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
+import Terms_privacy from "../Pages/Terms_privacy";
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ export default function AppRouter() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/terms-of-use" element={<Terms_privacy />} />
         </Route>
 
         {/* Pages WITHOUT Navbar & Footer */}

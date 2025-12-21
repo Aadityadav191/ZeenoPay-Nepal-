@@ -81,8 +81,7 @@ export default function Footer() {
               <li><Link to="/report" className="text-gray-600 hover:text-indigo-600 transition">Report a Problem</Link></li>
               <li><Link to="/faq" className="text-gray-600 hover:text-indigo-600 transition">FAQ</Link></li>
               <li><Link to="/returns" className="text-gray-600 hover:text-indigo-600 transition">Returns & Refunds</Link></li>
-              <li><Link to="/terms" className="text-gray-600 hover:text-indigo-600 transition">Terms of Use</Link></li>
-              <li><Link to="/privacy" className="text-gray-600 hover:text-indigo-600 transition">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-use" className="text-gray-600 hover:text-indigo-600 transition">Terms And Privacy </Link></li>
             </ul>
           </div>
         </div>
