@@ -51,7 +51,7 @@ const RefundPage = () => {
         </div>
 
         {/* Policy Content */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 text-left overflow-hidden">
           <div className="p-8 md:p-12">
             <h2 className="text-2xl font-bold mb-6">Our Policy</h2>
             

@@ -11,6 +11,12 @@ import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import Terms_privacy from "../Pages/Terms_privacy";
 import RefundPage from "../Pages/Return_Refunds";
+import ReportProblem from "../Pages/Report_Problem";
+import Createorder from "../Pages/createorder";
+import Calculator from "../Pages/Calculator";
+import Guides from '../Pages/Guides';
+import Recommended from '../Pages/Recommended';
+
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -21,9 +27,14 @@ export default function AppRouter() {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="/FAQ" element={<FAQ />} />
           <Route path="/terms-of-use" element={<Terms_privacy />} />
           <Route path="/return-refunds" element={<RefundPage />} />
+          <Route path="/Calculator" element={<Calculator/>} />
+          <Route path="/Report a Problem" element={<ReportProblem />} />
+          <Route path="/create-order" element={<Createorder/>}/>
+          <Route path="/Guides" element={<Guides/>}/>
+          <Route path="/recommended" element={<Recommended />} />
         </Route>
 
         {/* Pages WITHOUT Navbar & Footer */}

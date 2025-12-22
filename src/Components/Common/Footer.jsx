@@ -64,9 +64,9 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-left">
               <li><Link to="/create-order" className="text-gray-600 hover:text-indigo-600 transition">Create Order</Link></li>
-              <li><Link to="/calculator" className="text-gray-600 hover:text-indigo-600 transition">Calculator</Link></li>
+              <li><Link to="/Calculator" className="text-gray-600 hover:text-indigo-600 transition">Calculator</Link></li>
               <li><Link to="/blog" className="text-gray-600 hover:text-indigo-600 transition">Blog</Link></li>
-              <li><Link to="/guides" className="text-gray-600 hover:text-indigo-600 transition">Guides</Link></li>
+              <li><Link to="/Guides" className="text-gray-600 hover:text-indigo-600 transition">Guides</Link></li>
               <li><Link to="/recommended" className="text-gray-600 hover:text-indigo-600 transition">Recommended Websites</Link></li>
             </ul>
           </div>
@@ -78,8 +78,8 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-left">
               <li><Link to="/contact" className="text-gray-600 hover:text-indigo-600 transition">Contact</Link></li>
-              <li><Link to="/report" className="text-gray-600 hover:text-indigo-600 transition">Report a Problem</Link></li>
-              <li><Link to="/faq" className="text-gray-600 hover:text-indigo-600 transition">FAQ</Link></li>
+              <li><Link to="/Report a Problem" className="text-gray-600 hover:text-indigo-600 transition">Report a Problem</Link></li>
+              <li><Link to="/FAQ" className="text-gray-600 hover:text-indigo-600 transition">FAQ</Link></li>
               <li><Link to="/return-refunds" className="text-gray-600 hover:text-indigo-600 transition">Returns & Refunds</Link></li>
               <li><Link to="/terms-of-use" className="text-gray-600 hover:text-indigo-600 transition">Terms And Privacy </Link></li>
             </ul>
