@@ -69,7 +69,7 @@ export default function Navbar() {
               FAQ
             </Link>
             <Link
-              to="/Blog"
+              to="/return-refunds"
               className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
             >
               Returns & Refunds

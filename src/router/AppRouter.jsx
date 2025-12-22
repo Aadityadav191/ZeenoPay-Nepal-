@@ -10,6 +10,7 @@ import FAQ from "../Pages/FAQ";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 import Terms_privacy from "../Pages/Terms_privacy";
+import RefundPage from "../Pages/Return_Refunds";
 export default function AppRouter() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ export default function AppRouter() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terms-of-use" element={<Terms_privacy />} />
+          <Route path="/return-refunds" element={<RefundPage />} />
         </Route>
 
         {/* Pages WITHOUT Navbar & Footer */}

@@ -158,11 +158,14 @@ export default function LoginForms() {
               </div>
             </div>
           </div>
-          <Link to="/">
-            <button className="mt-4 py-2 px-4 bg-indigo-300 hover:bg-gray-400 focus:ring-indigo-800 focus:ring-offset-gray-200 text-black  transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
-              Go to home
-            </button>
-          </Link>
+            <div className="mt-8 text-center">
+            <a
+              href="/"
+              className="text-blue-500 hover:text-blue-700 font-medium transition-colors"
+            >
+              &larr; Return to Homepage
+            </a>
+          </div>
         </div>
       </form>
        <ToastContainer />

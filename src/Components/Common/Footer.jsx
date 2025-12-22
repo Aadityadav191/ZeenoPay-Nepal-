@@ -80,7 +80,7 @@ export default function Footer() {
               <li><Link to="/contact" className="text-gray-600 hover:text-indigo-600 transition">Contact</Link></li>
               <li><Link to="/report" className="text-gray-600 hover:text-indigo-600 transition">Report a Problem</Link></li>
               <li><Link to="/faq" className="text-gray-600 hover:text-indigo-600 transition">FAQ</Link></li>
-              <li><Link to="/returns" className="text-gray-600 hover:text-indigo-600 transition">Returns & Refunds</Link></li>
+              <li><Link to="/return-refunds" className="text-gray-600 hover:text-indigo-600 transition">Returns & Refunds</Link></li>
               <li><Link to="/terms-of-use" className="text-gray-600 hover:text-indigo-600 transition">Terms And Privacy </Link></li>
             </ul>
           </div>
