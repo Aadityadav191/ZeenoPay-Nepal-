@@ -12,7 +12,7 @@ import SignUp from "../Pages/SignUp";
 import Terms_privacy from "../Pages/Terms_privacy";
 import RefundPage from "../Pages/Return_Refunds";
 import ReportProblem from "../Pages/Report_Problem";
-import Createorder from "../Pages/createorder";
+import Createorder from "../Pages/Createorder";
 import Calculator from "../Pages/Calculator";
 import Guides from '../Pages/Guides';
 import Recommended from '../Pages/Recommended';
