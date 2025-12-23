@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowLeft, Box, RefreshCcw, ShieldCheck, Mail } from 'lucide-react';
+import { ArrowLeft, Box, RefreshCcw, Mail } from 'lucide-react';
 
 const RefundPage = () => {
   useEffect(() => {
@@ -72,7 +72,6 @@ const RefundPage = () => {
 
               <section className="bg-blue-50 p-6 rounded-xl border border-blue-100">
                 <div className="flex gap-4">
-                  <ShieldCheck className="text-blue-600 shrink-0" />
                   <div>
                     <h4 className="font-semibold text-blue-900">Holiday Extension</h4>
                     <p className="text-blue-800 text-sm mt-1">

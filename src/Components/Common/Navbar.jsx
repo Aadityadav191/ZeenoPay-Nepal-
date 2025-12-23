@@ -39,44 +39,44 @@ export default function Navbar() {
           <div className="hidden lg:flex  gap-0 items-center space-x-1 font-medium text-gray-700">
             <Link
               to="/about"
-              className="hover:text-indigo-600 hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600  rounded-lg px-3 py-1 transition"
             >
               About
             </Link>
             <Link
               to="/Contact"
-              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
             >
               Contact
             </Link>
             <Link
               to="/Blog"
-              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
             >
               Blog
             </Link>
 
             <Link
               to="/about"
-              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
             >
               Guides
             </Link>
             <Link
               to="/Contact"
-              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
             >
               FAQ
             </Link>
             <Link
               to="/return-refunds"
-              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
             >
               Returns & Refunds
             </Link>
             <Link
               to="/COST CALCULATOR"
-              className="hover:text-indigo-600  hover:bg-indigo-100 rounded-lg px-3 py-1 transition"
+              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
             >
               Cost Calculator
             </Link>

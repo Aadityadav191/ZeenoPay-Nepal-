@@ -77,7 +77,6 @@ export default function Footer() {
               Support
             </h3>
             <ul className="space-y-3 text-sm text-left">
-              <li><Link to="/contact" className="text-gray-600 hover:text-indigo-600 transition">Contact</Link></li>
               <li><Link to="/Report a Problem" className="text-gray-600 hover:text-indigo-600 transition">Report a Problem</Link></li>
               <li><Link to="/FAQ" className="text-gray-600 hover:text-indigo-600 transition">FAQ</Link></li>
               <li><Link to="/return-refunds" className="text-gray-600 hover:text-indigo-600 transition">Returns & Refunds</Link></li>

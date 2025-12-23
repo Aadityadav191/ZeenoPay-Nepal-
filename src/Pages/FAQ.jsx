@@ -25,7 +25,7 @@ const ZeenopaySupport = () => {
             <summary className="list-none p-4 font-medium cursor-pointer flex justify-between items-center hover:bg-slate-50">
               How long do refunds take?
               <span className="text-slate-300 group-open:rotate-180 transition-transform ml-2">
-                ↓
+                ^
               </span>
             </summary>
             <div className="px-4 pb-4 text-sm text-slate-500 border-t text-left border-slate-50 pt-2">
@@ -38,7 +38,7 @@ const ZeenopaySupport = () => {
             <summary className="list-none p-4 font-medium cursor-pointer flex justify-between items-center hover:bg-slate-50">
               Is my money secure?
               <span className="text-slate-300 group-open:rotate-180 transition-transform ml-2">
-                ↓
+                
               </span>
             </summary>
             <div className="px-4 pb-4 text-sm text-slate-500 border-t text-left border-slate-50 pt-2">
