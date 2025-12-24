@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Home from "../Pages/Home";
 import Contact from "../Pages/Contact";
 import Blog from "../Pages/Blog";
+import BlogDetails from "../Pages/BlogDetails";
 import NotFound from "../Pages/NotFound";
 import About from "../Pages/About";
 import FAQ from "../Pages/FAQ";
@@ -26,6 +27,7 @@ export default function AppRouter() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/terms-of-use" element={<Terms_privacy />} />

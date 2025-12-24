@@ -1,5 +1,8 @@
 import React from "react";
 import Cards from "../Components/Cards";
+import { LuFilter } from "react-icons/lu";
+import { IoSearchOutline } from "react-icons/io5";
+
 
 export default function Blog() {
   const blogs = [
@@ -36,10 +39,10 @@ export default function Blog() {
   return (
     <>
       <main className="bg-white grid grid-cols-1 px-6 md:px-12 lg:px-24 pt-4 md:pt-6 ">
-        <section className=" p-6 rounded-lg  flex flex-col md:flex-row justify-between items-center w-full ">
-          <div className="text-left mb-4 ">
+        <section className="pt-10 rounded-lg  flex flex-col md:flex-row justify-between items-center w-full ">
+          <div className="text-left mb-5 ">
             <h1 className="text-4xl font-bold mb-1 text-left">
-              Latest Articles{" "}
+              Latest Articles
             </h1>
             <p className="text-gray-700">
               Insights, tutorials, and industry news
@@ -50,10 +53,10 @@ export default function Blog() {
             <input
               type="text"
               placeholder="Search articles..."
-              className="border border-gray-300 rounded-md px-4 py-2 w-full "
+              className="border border-gray-300 rounded-md px-5 py-2 w-full "
             ></input>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">
-              Filter
+            <button className="bg-blue-500 text-white px-5 py-2 flex items-center gap-2 rounded-md hover:bg-blue-600 transition">
+              <LuFilter /> Filters
             </button>
           </div>
         </section>
@@ -76,6 +79,7 @@ export default function Blog() {
           {blogs.map((blog) => (
             <Cards
               key={blog.id}
+              id={blog.id}
               title={blog.title}
               content={blog.content}
               image={blog.image}
