@@ -32,7 +32,7 @@ export default function Blog() {
     id: 5,
     title: "The Future of Digital Transformation",
     content: "Navigating the shift toward AI-integrated systems. Learn how to leverage emerging technologies to optimize your operational efficiency.",
-    image: "https://cdn.britannica.com/94/494-050-A674AD3A/Fallow-deer-dama-dama.jpg",
+    image: "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
   },
   {
     id: 6,
