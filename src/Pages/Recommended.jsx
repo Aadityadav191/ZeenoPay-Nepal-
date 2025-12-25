@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function Recommended() {
     const websites = [
@@ -7,6 +7,9 @@ export default function Recommended() {
   { name: "CloudHost", tag: "Tech", url: "chost.net" },
   { name: "EcoMarket", tag: "Groceries", url: "ecomarket.com" }
 ];
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}, []);
   return (
     <>
       <div className="max-w-md mx-auto p-4">

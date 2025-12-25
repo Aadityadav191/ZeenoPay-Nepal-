@@ -22,7 +22,7 @@ const Home = () => {
           user-friendly services to empower voters worldwide.
         </p>
         <div className="mt-8 flex gap-4">
-          <button className="px-8 py-3 text-lg font-medium text-white bg-indigo-600 rounded-full hover:bg-indigo-700 shadow-lg transition transform hover:-translate-y-1">
+          <button className="px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-full hover:bg-indigo-700 shadow-lg transition transform hover:-translate-y-1">
             Start Free Trial
           </button>
           <button className="px-8 py-3 text-lg font-medium text-indigo-600 bg-white border border-indigo-200 rounded-full hover:bg-indigo-50 transition">

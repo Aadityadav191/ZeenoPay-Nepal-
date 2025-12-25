@@ -97,7 +97,7 @@ const RefundPage = () => {
                 <h3 className="font-bold text-xl">Ready to start a return?</h3>
                 <p className="text-gray-500">You'll need your order number and email address.</p>
               </div>
-              <button className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
+              <button className="bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
                 Start My Return
               </button>
             </div>

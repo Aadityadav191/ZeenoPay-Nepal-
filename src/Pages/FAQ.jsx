@@ -15,7 +15,7 @@ const ZeenopaySupport = () => {
         </p>
       </div>
 
-      <section className="mb-10">
+      <section className="mb-10 space-y-6 w-full">
         <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
           <HelpCircle size={14} /> Common Questions
         </h2>
@@ -33,20 +33,43 @@ const ZeenopaySupport = () => {
               your original payment method.
             </div>
           </details>
-
-          <details className="group flex-1 border border-slate-100 rounded-xl bg-white transition-all overflow-hidden w-full">
-            <summary className="list-none p-4 font-medium cursor-pointer flex justify-between items-center hover:bg-slate-50">
-              Is my money secure?
-              <span className="text-slate-300 group-open:rotate-180 transition-transform ml-2">
-                
-              </span>
-            </summary>
-            <div className="px-4 pb-4 text-sm text-slate-500 border-t text-left border-slate-50 pt-2">
-              Zeenopay uses bank-grade encryption and 2-factor authentication to
-              keep your funds safe.
-            </div>
-          </details>
         </div>
+        <details className="group flex-1 border border-slate-100 rounded-xl bg-white transition-all overflow-hidden w-full">
+          <summary className="list-none p-4 font-medium cursor-pointer flex justify-between items-center hover:bg-slate-50">
+            Is my money secure?
+            <span className="text-slate-300 group-open:rotate-180 transition-transform ml-2"></span>
+          </summary>
+          <div className="px-4 pb-4 text-sm text-slate-500 border-t text-left border-slate-50 pt-2">
+            Zeenopay uses bank-grade encryption and 2-factor authentication to
+            keep your funds safe.
+          </div>
+        </details>
+        <details className="group flex-1 border border-slate-100 rounded-xl bg-white transition-all overflow-hidden w-full">
+          <summary className="list-none p-4 font-medium cursor-pointer flex justify-between items-center hover:bg-slate-50">
+            Is Zeenopay good for my service ?
+            <span className="text-slate-300 group-open:rotate-180 transition-transform ml-2">
+              ^
+            </span>
+          </summary>
+          <div className="px-4 pb-4 text-sm text-slate-500 border-t text-left border-slate-50 pt-2">
+            Absolutely! Zeenopay is designed to provide seamless and secure
+            international voting solutions, making it an excellent choice for
+            your service needs.
+          </div>
+        </details>
+        <details className="group flex-1 border border-slate-100 rounded-xl bg-white transition-all overflow-hidden w-full">
+          <summary className="list-none p-4 font-medium cursor-pointer flex justify-between items-center hover:bg-slate-50">
+            How big is Zeenopay ?
+            <span className="text-slate-300 group-open:rotate-180 transition-transform ml-2">
+              ^
+            </span>
+          </summary>
+          <div className="px-4 pb-4 text-sm text-slate-500 border-t text-left border-slate-50 pt-2">
+            Zeenopay is a rapidly growing platform with a strong focus on providing
+            secure and efficient international voting and ticketing  solutions. It has a growing
+            user base and is expanding its services globally.
+          </div>
+        </details>
       </section>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -76,7 +99,7 @@ const ZeenopaySupport = () => {
               rows="3"
               className="w-full p-3 bg-slate-50 border-none rounded-xl text-sm focus:ring-2 focus:ring-blue-500 outline-none"
             ></textarea>
-            <button className="w-full bg-[#4182f3] text-white font-bold py-3 rounded-xl hover:bg-black transition-all">
+            <button onClick={()=>{alert("Thanks For Your Review we will reach you later  ")}} className="w-full bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white font-bold py-3 rounded-xl hover:bg-black transition-all">
               Submit
             </button>
           </form>

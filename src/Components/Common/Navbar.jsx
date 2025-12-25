@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.jpeg";
 
 export default function Navbar() {
@@ -17,15 +17,15 @@ export default function Navbar() {
             <p>Zeenopay@gmail.com</p>
           </div>
 
-          <Link to="/cost-calculator">
+          <NavLink to="/cost-calculator">
             <a className="uppercase tracking-[0.15em] text-xs font-bold text-indigo-800 opacity-80 hover:text-indigo-600 transition">
               COST CALCULATOR
             </a>
-          </Link>
+          </NavLink>
         </div> */}
 
-        <nav className="flex items-center justify-between px-4 sm:px-8 py-1">
-          <Link
+        <nav className="flex items-center justify-between px-4 sm:px-8 py-2">
+          <NavLink
             to="/"
             className="flex items-center hover:opacity-90 transition"
           >
@@ -34,58 +34,100 @@ export default function Navbar() {
               alt="Zeenopay"
               className="h-14 sm:h-14 w-auto rounded-lg"
             />
-          </Link>
+          </NavLink>
 
           <div className="hidden lg:flex  gap-0 items-center space-x-1 font-medium text-gray-700">
-            <Link
+            <NavLink
               to="/about"
-              className="hover:text-indigo-600  rounded-lg px-3 py-1 transition"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-bold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               About
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/Contact"
-              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-bold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               Contact
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/Blog"
-              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-semibold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               Blog
-            </Link>
+            </NavLink>
 
-            <Link
-              to="/about"
-              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
+            <NavLink
+              to="/Guides"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-bold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               Guides
-            </Link>
-            <Link
-              to="/Contact"
-              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
+            </NavLink>
+            <NavLink
+              to="/FAQ"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-bold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               FAQ
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/return-refunds"
-              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-bold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               Returns & Refunds
-            </Link>
-            <Link
-              to="/COST CALCULATOR"
-              className="hover:text-indigo-600   rounded-lg px-3 py-1 transition"
+            </NavLink>
+            <NavLink
+              to="/Calculator"
+              className={({ isActive }) =>
+                `rounded-lg px-3 py-1 transition ${
+                  isActive
+                    ? "text-indigo-600 font-bold"
+                    : "text-gray-700 hover:text-indigo-600"
+                }`
+              }
             >
               Cost Calculator
-            </Link>
+            </NavLink>
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <Link to="/create-order">
+            <NavLink to="/create-order">
               <button
-                className="flex items-center gap-2 px-6 py-2.5 text-sm font-semibold text-white 
+                className="flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white 
                            bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-full shadow-md transition duration-300  hover:from-indigo-600 hover:to-[#36b6ff]"
               >
                 <svg
@@ -103,13 +145,13 @@ export default function Navbar() {
                 </svg>
                 Create Order
               </button>
-            </Link>
+            </NavLink>
 
-            <Link to="/login">
+            <NavLink to="/login">
               <button className="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-full hover:border-gray-400 hover:text-gray-900 transition duration-300">
                 Login / Register
               </button>
-            </Link>
+            </NavLink>
           </div>
 
           <button
@@ -151,7 +193,63 @@ export default function Navbar() {
           aria-hidden={!isOpen}
         >
           <div className="flex flex-col space-y-3 px-4">
-            <Link to="/create-order" className="w-full" onClick={closeMenu}>
+            <hr className="border-gray-200 mt-2 mb-2" />
+
+            {/* Main Navigation NavLinks */}
+            <NavLink
+              to="/about"
+              onClick={closeMenu}
+              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/Contact"
+              onClick={closeMenu}
+              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
+            >
+              Contact
+            </NavLink>
+            <NavLink
+              to="/Blog"
+              onClick={closeMenu}
+              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
+            >
+              Blog
+            </NavLink>
+            <NavLink
+              to="/FAQ"
+              onClick={closeMenu}
+              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
+            >
+              FAQ
+            </NavLink>
+            <NavLink
+              to="/Returns & Refunds"
+              onClick={closeMenu}
+              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
+            >
+              Returns & Refunds
+            </NavLink>
+            <NavLink
+              to="/Cost Calculator"
+              onClick={closeMenu}
+              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
+            >
+              Cost Calculator
+            </NavLink>
+
+            <hr className="border-gray-200 mt-2 mb-2" />
+
+            {/* Login/Register Button */}
+            <NavLink to="/login" className="w-full" onClick={closeMenu}>
+              <button className="w-full px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-lg hover:border-gray-400 hover:text-gray-900 transition">
+                Login / Register
+              </button>
+            </NavLink>
+
+            {/* Theme Toggle (Example) */}
+            <NavLink to="/create-order" className="w-full" onClick={closeMenu}>
               <button className="flex items-center justify-center w-full gap-2 px-6 py-2.5 text-sm font-semibold text-white bg-indigo-500 rounded-lg shadow-md hover:bg-indigo-600 transition">
                 <svg
                   className="w-4 h-4"
@@ -168,9 +266,13 @@ export default function Navbar() {
                 </svg>
                 Create Order
               </button>
-            </Link>
+            </NavLink>
 
-            <Link to="/cost-calculator" className="w-full" onClick={closeMenu}>
+            <NavLink
+              to="/cost-calculator"
+              className="w-full"
+              onClick={closeMenu}
+            >
               <button className="flex items-center justify-center w-full gap-2 px-5 py-2.5 text-sm font-semibold text-indigo-600 border border-indigo-500 rounded-lg hover:bg-indigo-50 transition">
                 <svg
                   className="w-4 h-4"
@@ -187,81 +289,7 @@ export default function Navbar() {
                 </svg>
                 COST CALCULATOR
               </button>
-            </Link>
-
-            <hr className="border-gray-200 mt-2 mb-2" />
-
-            {/* Main Navigation Links */}
-            <Link
-              to="/about"
-              onClick={closeMenu}
-              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
-            >
-              About
-            </Link>
-            <Link
-              to="/Contact"
-              onClick={closeMenu}
-              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
-            >
-              Contact
-            </Link>
-            <Link
-              to="/Blog"
-              onClick={closeMenu}
-              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/FAQ"
-              onClick={closeMenu}
-              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
-            >
-              FAQ
-            </Link>
-            <Link
-              to="/Returns & Refunds"
-              onClick={closeMenu}
-              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
-            >
-              Returns & Refunds
-            </Link>
-            <Link
-              to="/Cost Calculator"
-              onClick={closeMenu}
-              className="py-1.5 text-gray-700 hover:text-indigo-600 transition"
-            >
-              Cost Calculator
-            </Link>
-
-            <hr className="border-gray-200 mt-2 mb-2" />
-
-            {/* Login/Register Button */}
-            <Link to="/login" className="w-full" onClick={closeMenu}>
-              <button className="w-full px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-lg hover:border-gray-400 hover:text-gray-900 transition">
-                Login / Register
-              </button>
-            </Link>
-
-            {/* Theme Toggle (Example) */}
-            <div className="flex justify-end pt-2">
-              <button className="p-2.5 text-gray-600 border border-gray-200 rounded-full hover:bg-gray-100 transition">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  />
-                </svg>
-              </button>
-            </div>
+            </NavLink>
           </div>
         </div>
       </div>

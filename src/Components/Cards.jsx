@@ -7,10 +7,10 @@ export default function Cards({ title, content, image, id }) {
   return (
     <>
       <div
-        onClick={() => navigate(`/blog/${id}`)}
+        onClick={() => navigate(`/Blog/${id}`)}
         className="relative flex w-90 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md hover:cursor-pointer mb-5 "
       >
-        <div className="relative mx-4 -mt-6 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
+        <div className="relative  -mt-6 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
           <img
             src={image}
             alt="card-image"
@@ -22,12 +22,12 @@ export default function Cards({ title, content, image, id }) {
             {title}
           </h5>
           <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-            {content.split(" ").slice(0, 20).join(" ")}...
+            {content.split(" ").slice(0, 15).join(" ")}...
           </p>
         </div>
         <div className="p-6 pt-0">
           <button
-            onClick={() => navigate(`/blog/${id}`)}
+            onClick={() => navigate(`/Blog/${id}`)}
             data-ripple-light="true"
             type="button"
             className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"

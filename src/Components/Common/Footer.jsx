@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone, Facebook, Instagram, Twitter, MessageSquare } from
 export default function Footer() {
   return (
     
-    <footer className="bg-[#c7d7f9] text-gray-700 pt-16 pb-6 relative overflow-hidden">
+<footer className="bg-[#c7d7f9] text-gray-700 pt-10 pb-6 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-1 relative z-5">       
         
@@ -65,7 +65,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-left">
               <li><Link to="/create-order" className="text-gray-600 hover:text-indigo-600 transition">Create Order</Link></li>
               <li><Link to="/Calculator" className="text-gray-600 hover:text-indigo-600 transition">Calculator</Link></li>
-              <li><Link to="/blog" className="text-gray-600 hover:text-indigo-600 transition">Blog</Link></li>
+              <li><Link to="/Blog" className="text-gray-600 hover:text-indigo-600 transition">Blog</Link></li>
               <li><Link to="/Guides" className="text-gray-600 hover:text-indigo-600 transition">Guides</Link></li>
               <li><Link to="/recommended" className="text-gray-600 hover:text-indigo-600 transition">Recommended Websites</Link></li>
             </ul>
