@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import viteLogo from "../../assets/vite.jpeg";
 import { FcGoogle } from "react-icons/fc";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function LoginForms() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [showpassword, hidepassword] = useState(false);
 
   const [errors, setErrors] = useState({});
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -49,16 +49,16 @@ export default function LoginForms() {
     }
     setErrors(newErrors);
     if (isValid) {
-        toast.success(`Welcome ${formData.email}`);
+      toast.success(`Welcome ${formData.email}`);
     }
     setFormData({ email: "", password: "" });
   };
 
   const getInputClass = (fieldName) => {
-    return `border rounded-full px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
+    return `border rounded-lg px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
       errors[fieldName]
         ? "border-red-500 focus:border-red-500 focus:ring-red-200"
-        : "border-gray-200 focus:border-blue-500 focus:ring-blue-500"
+        : "border-gray-200 focus:border-indigo-500 focus:ring-blue-500"
     }`;
   };
 
@@ -88,7 +88,7 @@ export default function LoginForms() {
                 <input
                   className={getInputClass("email")}
                   type="text"
-                  placeholder="aadityadav@gmail.com"
+                  placeholder="YourMail@gmail.com"
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -106,15 +106,24 @@ export default function LoginForms() {
                 >
                   Password
                 </label>
-                <input
-                  className={getInputClass("password")}
-                  type="password"
-                  placeholder="*******"
-                  id="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
+                <div className="relative">
+                  <input
+                    className={`${getInputClass("password")} pr-16`} 
+                    type={showpassword ? "text" : "password"}
+                    placeholder="*******"
+                    id="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                  />
 
+                  <button
+                    type="button"
+                    onClick={() => hidepassword(!showpassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-blue-500"
+                  >
+                    {showpassword ? "Hide" : "Show"}
+                  </button>
+                </div>
                 {errors.password && (
                   <p className="text-left text-red-500 text-xs mt-1 ml-2 mb-4">
                     {errors.password}
@@ -131,13 +140,13 @@ export default function LoginForms() {
               </div>
               <div className="mt-1 mb-4">
                 <button
-                  className="py-2 px-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                  className="py-2 px-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
                 >
                   Sign in
                 </button>
               </div>
-              ------ OR ------
+              <span className="text-center block">------ OR ------</span>
               <div className="flex justify-center w-full items-center mt-2">
                 <div>
                   <button className="flex items-center justify-center py-2 px-20 bg-white hover:bg-gray-200 focus:ring-blue-500 focus:ring-offset-blue-200 text-gray-700 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
@@ -158,7 +167,7 @@ export default function LoginForms() {
               </div>
             </div>
           </div>
-            <div className="mt-8 text-center">
+          <div className="mt-8 text-center">
             <a
               href="/"
               className="text-blue-500 hover:text-blue-700 font-medium transition-colors"
@@ -168,8 +177,7 @@ export default function LoginForms() {
           </div>
         </div>
       </form>
-       <ToastContainer />
-
+      <ToastContainer />
     </>
   );
 }

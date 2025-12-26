@@ -72,7 +72,7 @@ export default function Blog() {
 
   //Pagination logic
   const [page, setPage] = useState(1);
-  const perPage = 3;
+  const perPage = 6;
 
   const start = (page - 1) * perPage;
   const end = page * perPage;

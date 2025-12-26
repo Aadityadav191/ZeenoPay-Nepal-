@@ -72,9 +72,9 @@ export default function ContactForm() {
 
   const getInputClass = (fieldName) => {
     if (errors[fieldName]) {
-      return "border rounded-full px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200";
+      return "border rounded-lg px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200";
     }
-    return "border rounded-full px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-500";
+    return "border rounded-lg px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-blue-500";
   };
 
   return (
@@ -96,7 +96,7 @@ export default function ContactForm() {
                     className={getInputClass("name")}
                     type="text"
                     name="name"
-                    placeholder="Aadit Yadav"
+                    placeholder="Your full name"
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -121,7 +121,7 @@ export default function ContactForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="aadityadav@gmail.com"
+                    placeholder="Youremail@gmail.com"
                   />
                   {errors.email && (
                     <p className="text-left text-red-500 text-xs mt-1 ml-2">
@@ -145,7 +145,7 @@ export default function ContactForm() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+123 456 7890"
+                      placeholder="+977 984XXXXXXXX"
                     />
                     {errors.phone && (
                       <p className="text-left text-red-500 text-xs mt-1 ml-2">
@@ -176,7 +176,7 @@ export default function ContactForm() {
               {/* Submit Button */}
               <div className="m-4">
                 <button
-                  className="py-3 px-4 bg-indigo-500 hover:bg-indigo-600 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full"
+                  className="py-3 px-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:bg-indigo-600 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
                 >
                   Send Message

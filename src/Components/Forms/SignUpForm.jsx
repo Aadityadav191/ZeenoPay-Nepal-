@@ -13,6 +13,7 @@ export default function SignUpForm() {
     newsletter: false,
   });
 
+  const [showpassword, setShowpassword] = useState(false);
   const [errors, setErrors] = useState({});
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -86,7 +87,7 @@ export default function SignUpForm() {
   };
 
   const getInputClass = (fieldName) => {
-    return `border rounded-full px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
+    return `border rounded-lg px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
       errors[fieldName]
         ? "border-red-500 focus:border-red-500 focus:ring-red-200"
         : "border-gray-200 focus:border-blue-500 focus:ring-blue-500"
@@ -119,7 +120,7 @@ export default function SignUpForm() {
                 <input
                   className={getInputClass("fullName")}
                   type="text"
-                  placeholder="Pramit Bakhrel"
+                  placeholder="Your full name"
                   id="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
@@ -139,7 +140,7 @@ export default function SignUpForm() {
                 <input
                   className={getInputClass("email")}
                   type="text"
-                  placeholder="Pramitbakhrel@gmail.com"
+                  placeholder="Yourmail@gmail.com"
                   id="email"
                   value={formData.email}
                   onChange={handleChange}
@@ -149,7 +150,7 @@ export default function SignUpForm() {
                     {errors.email}
                   </p>
                 )}
-
+<div className="relative">
                 <label
                   className="font-semibold text-l text-gray-600 pb-1 block text-left"
                   htmlFor="password"
@@ -157,13 +158,21 @@ export default function SignUpForm() {
                   Create Password
                 </label>
                 <input
-                  className={getInputClass("password")}
-                  type="password"
+                  className={`${getInputClass("password")} pr-16`} 
+                  type={showpassword ? "text" : "password"}
                   placeholder="*******"
                   id="password"
                   value={formData.password}
                   onChange={handleChange}
                 />
+                 <button
+                    type="button"
+                    onClick={() => setShowpassword(!showpassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-blue-500"
+                  >
+                    {showpassword ? "Hide" : "Show"}
+                  </button>
+                  </div>
                 {errors.password && (
                   <p className="text-left text-red-500 text-xs mt-1 ml-2 mb-4">
                     {errors.password}
@@ -206,7 +215,7 @@ export default function SignUpForm() {
 
               <div className="mt-1 mb-4">
                 <button
-                  className="py-2 px-4 bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-full"
+                  className="py-2 px-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
                 >
                   Create Account
