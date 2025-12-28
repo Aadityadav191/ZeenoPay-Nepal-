@@ -50,19 +50,19 @@ export default function Blog() {
     id: 8,
     title: "The Psychology of Consumer Behavior",
     content: "What drives a purchase? We examine the cognitive triggers and emotional drivers that influence how modern customers interact with brands.",
-    image: "https://cdn.britannica.com/94/494-050-A674AD3A/Fallow-deer-dama-dama.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLQssBce8coyY0Tyrc6DoLhAVs3Luebst8Vw&s",
   },
   {
     id: 9,
     title: "Building Resilient Infrastructure",
     content: "An architectural perspective on creating scalable and secure systems that can withstand the demands of modern web traffic.",
-    image: "https://cdn.britannica.com/94/494-050-A674AD3A/Fallow-deer-dama-dama.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfmO3DtNHLYfE-BrAptQTtC0ZmleZsacnraw&s",
   },
   {
     id: 10,
     title: "Ethics in the Age of Automation",
     content: "As automation becomes standard, we discuss the ethical considerations and responsibilities of creators and business leaders in a digital world.",
-    image: "https://cdn.britannica.com/94/494-050-A674AD3A/Fallow-deer-dama-dama.jpg",
+    image: "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
   },
 ];
 
@@ -81,7 +81,7 @@ export default function Blog() {
 
   return (
     <>
-      <main className="bg-white grid grid-cols-1 px-6 md:px-12 lg:px-24 pt-4 md:pt-6">
+      <main className="bg-white grid grid-cols-1 px-6 md:px-12 lg:px-24 pt-40 md:pt-6">
         {/* Header */}
         <section className="pt-5 rounded-lg flex flex-col md:flex-row justify-between items-center w-full">
           <div className="text-left mb-5">
@@ -93,11 +93,11 @@ export default function Blog() {
 
           <div className="flex gap-4 w-full md:w-auto">
             <input
-              type="text"
+              type="search"
               placeholder="Search articles..."
               className="border border-gray-300 rounded-md px-5 py-2 w-full"
             />
-            <button className="bg-blue-500 text-white px-5 py-2 flex items-center gap-2 rounded-md">
+            <button className="bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-5 py-2 flex items-center gap-2 rounded-md">
               <LuFilter /> Filters
             </button>
           </div>

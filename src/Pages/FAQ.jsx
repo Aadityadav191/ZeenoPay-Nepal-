@@ -15,7 +15,7 @@ const ZeenopaySupport = () => {
         </p>
       </div>
 
-      <section className="mb-16 w-full">
+      <section className="mb-16 max-w-7xl">
         <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4 flex items-center gap-2">
           <HelpCircle size={14} /> Common Questions
         </h2>

@@ -10,19 +10,6 @@ export default function Navbar() {
   return (
     <>
       <div className="w-full font-sans bg-white shadow-lg sticky top-0 z-50">
-        {/* <div className="hidden md:flex justify-between items-center py-2.5 px-4 sm:px-8 border-b border-gray-200 text-sm text-gray-600">
-          <div className="flex items-center space-x-6 font-medium">
-            <p>+977 9821747900</p>
-            <p>+977 9821747900</p>
-            <p>Zeenopay@gmail.com</p>
-          </div>
-
-          <NavLink to="/cost-calculator">
-            <a className="uppercase tracking-[0.15em] text-xs font-bold text-indigo-800 opacity-80 hover:text-indigo-600 transition">
-              COST CALCULATOR
-            </a>
-          </NavLink>
-        </div> */}
 
         <nav className="flex items-center justify-between px-4 sm:px-8 py-2">
           <NavLink
@@ -128,7 +115,7 @@ export default function Navbar() {
             <NavLink to="/create-order">
               <button
                 className="flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white 
-                           bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-full shadow-md transition duration-300  hover:from-indigo-600 hover:to-[#36b6ff]"
+                           bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-lg shadow-md transition duration-300  hover:from-indigo-600 hover:to-[#36b6ff]"
               >
                 <svg
                   className="w-4 h-4"
@@ -148,7 +135,7 @@ export default function Navbar() {
             </NavLink>
 
             <NavLink to="/login">
-              <button className="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-full hover:border-gray-400 hover:text-gray-900 transition duration-300">
+              <button className="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-lg hover:border-gray-400 hover:text-gray-900 transition duration-300">
                 Login / Register
               </button>
             </NavLink>

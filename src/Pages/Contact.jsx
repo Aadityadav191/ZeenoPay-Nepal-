@@ -13,8 +13,17 @@ export default function Home() {
   
   return (
     <>
-      <main className="min-h-screen bg-[#f7fafc] px-4 py-12 md:px-8 md:py-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+      <main className="min-h-screen  px-4 py-12 md:px-1 md:py-0 mb-10">
+       <div className="bg-white border-b mb-10 ">
+        <div className="max-w-5xl mx-auto px-4 py-12 text-center">
+          <h1 className="text-4xl font-bold text-[#3e8ff5] mb-4">Contact Us </h1>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            We want you to love what you ordered. If you're not completely satisfied, 
+            we've made our return process as simple as possible.
+          </p>
+        </div>
+      </div>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
           {/* Section 1: Contact Form */}
           <section className="w-full md:w-1/2 p-6 md:p-8 text-left shadow-lg rounded-2xl border border-gray-200 bg-white">
             <h1 className="text-2xl font-bold text-gray-800 mb-6 uppercase tracking-wide transition-transform hover:scale-[1.01] duration-300">

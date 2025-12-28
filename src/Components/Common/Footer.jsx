@@ -14,7 +14,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#c7d7f9] text-gray-700 pt-10 pb-6 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
+    <footer className="bg-[#c8e9fc] text-gray-700 pt-10 pb-6 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-1 relative z-5">
         <div className="grid grid-cols-1  md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
           <div className="space-y-2 ">
