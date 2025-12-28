@@ -21,7 +21,7 @@ const RefundPage = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-12">
+      <div className="max-w-7xl mx-auto mt-12">
         {/* Policy Content */}
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 text-left overflow-hidden">
           <div className="p-8 md:p-12">
