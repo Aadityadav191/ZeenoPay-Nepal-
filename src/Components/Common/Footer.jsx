@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import Footerlogo from "../../assets/Footerlogo.png";
+import FooterLogo from "../../assets/FooterLogo.png";
 import {
   Mail,
   MapPin,
@@ -23,7 +23,7 @@ export default function Footer() {
             className="flex items-center hover:opacity-90 transition"
           >
             <img
-              src={Footerlogo}
+              src={FooterLogo}
               alt="Zeenopay"
               className="h-24 sm:h-25 w-auto rounded-lg"
             />
