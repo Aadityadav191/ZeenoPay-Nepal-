@@ -15,7 +15,7 @@ export default function About() {
       <div className="bg-white border-b mb-10 ">
         <div className="max-w-5xl mx-auto px-4 py-12 text-center">
           <h1 className="text-4xl font-extrabold text-[#3e8ff5] mb-6">
-            About ZeenoPay Nepal 🫰
+            About ZeenoPay Nepal 
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We want you to love what you ordered. If you're not completely satisfied, 
