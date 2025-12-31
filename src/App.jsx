@@ -6,7 +6,7 @@ export default function App() {
   const [showCookie, setShowCookie] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowCookie(true), 1000);
+    const timer = setTimeout(() => setShowCookie(true), 5000);
     return () => clearTimeout(timer);
   }, []);
 
