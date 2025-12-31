@@ -11,7 +11,7 @@ export default function About() {
 
   return (
     <>
-      <div className="min-h-screen bg-white  items-center justify-center ">
+      <div className="min-h-screen bg-gray-50   items-center justify-center ">
       <div className="bg-white border-b mb-10 ">
         <div className="max-w-5xl mx-auto px-4 py-12 text-center">
           <h1 className="text-4xl font-extrabold text-[#3e8ff5] mb-6">
@@ -52,7 +52,7 @@ export default function About() {
     </p>
     
     <div className="inline-block w-full text-center md:text-left">
-      <p className="inline-flex items-center gap-2 text-lg font-medium text-[#3e8ff5] bg-indigo-50 px-6 py-3 rounded-full hover:bg-indigo-600 hover:text-white transition-all cursor-default shadow-sm">
+      <p className="inline-flex items-center gap-2 text-lg font-medium text-[#3e8ff5] bg-indigo-50 px-6 py-3 rounded-full hover:bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:text-white transition-all cursor-default shadow-sm">
         <span>✨</span>
         Thank you for choosing ZeenoPay Nepal – where your business meets endless possibilities!
       </p>

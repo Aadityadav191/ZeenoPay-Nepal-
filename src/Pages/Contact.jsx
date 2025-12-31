@@ -11,9 +11,9 @@ export default function Home() {
     });
   }, []);
   
-  return (
+  return ( 
     <>
-      <main className="min-h-screen  px-4 py-12 md:px-1 md:py-0 mb-10">
+      <main className="min-h-screen  px-4 py-12 md:px-1 md:py-0 mb-10 ">
        <div className="bg-white border-b mb-10 ">
         <div className="max-w-5xl mx-auto px-4 py-12 text-center">
           <h1 className="text-4xl font-bold text-[#3e8ff5] mb-4">Contact Us </h1>
@@ -23,7 +23,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 ">
           {/* Section 1: Contact Form */}
           <section className="w-full md:w-1/2 p-6 md:p-8 text-left shadow-lg rounded-2xl border border-gray-200 bg-white">
             <h1 className="text-2xl font-bold text-gray-800 mb-6 uppercase tracking-wide transition-transform hover:scale-[1.01] duration-300">

@@ -14,7 +14,7 @@ export default function Terms_privacy() {
       <div className="bg-gray-50 min-h-screen py-7 shadow-xl ">
         <div className="bg-white border-b mb-10 ">
           <div className="max-w-5xl mx-auto px-4 py-12 text-center">
-            <h1 className="text-4xl font-bold  text-[#36b6ff] mb-4">
+            <h1 className="text-4xl font-bold  text-black mb-4">
               Terms & Conditions{" "}
             </h1>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -29,7 +29,7 @@ export default function Terms_privacy() {
             <div className="px-6 py-8 max-w-7xl rounded-xl">
               <div className="prose prose-blue text-gray-700 space-y-8 text-left  ">
                 <section>
-                  <h3 className="text-xl font-semibold text-[#36b6ff] mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     1. Website Use
                   </h3>
                   <p>
@@ -39,7 +39,7 @@ export default function Terms_privacy() {
                 </section>
 
                 <section>
-                  <h3 className="text-xl font-semibold text-[#36b6ff] mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     2. Intellectual Property
                   </h3>
                   <p>
@@ -50,7 +50,7 @@ export default function Terms_privacy() {
                 </section>
 
                 <section>
-                  <h3 className="text-xl font-semibold text-[#36b6ff] mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     3. Limitation of Liability
                   </h3>
                   <p>
@@ -60,7 +60,7 @@ export default function Terms_privacy() {
                 </section>
 
                 <section>
-                  <h3 className="text-xl font-semibold text-[#36b6ff] mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     4. Governing Law
                   </h3>
                   <p>
@@ -70,7 +70,7 @@ export default function Terms_privacy() {
                 </section>
  
                 <section>
-                  <h3 className="text-xl font-semibold text-[#36b6ff] mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     5. Updates to Terms
                   </h3>
                   <p>
@@ -80,7 +80,7 @@ export default function Terms_privacy() {
                 </section>
 
                 <section>
-                  <h3 className="text-xl font-semibold text-[#36b6ff] mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     6. Contact
                   </h3>
                   <p>
