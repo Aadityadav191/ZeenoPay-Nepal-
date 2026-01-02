@@ -14,7 +14,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#c8e9fc] text-gray-700 pt-10 pb-6 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-r from-[#9ed7f8] to-indigo-300 text-gray-700 pt-10 pb-6 px-4 sm:px-6 lg:px-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-1 relative z-5">
         <div className="grid grid-cols-1  md:grid-cols-3 gap-12 md:gap-8 lg:gap-16">
           <div className="space-y-2 ">
@@ -59,28 +59,28 @@ export default function Footer() {
               <a
                 href="https://www.facebook.com/zeenopaynepal"
                 target="_blank"
-                className="p-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-200 transition"
+                className="p-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-[#36b6ff] transition"
               >
                 <Facebook className="w-4 h-4" />
               </a>
               <a
                 href="https://www.instagram.com/zeenopaynepal"
                 target="_blank"
-                className="p-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-200 transition"
+                className="p-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-[#36b6ff] transition"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="https://twitter.com/zeenopaynepal"
                 target="_blank"
-                className="p-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-200 transition"
+                className="p-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-[#36b6ff] transition"
               >
                 <Twitter className="w-4 h-4" />
               </a>
               <a
                 href="https://www.linkedin.com/company/zeenopaynepal"
                 target="_blank"
-                className="p-2 border border-gray-300 rounded-full text-gray-600 hover:bg-gray-200 transition"
+                className="p-2 border border-gray-300 rounded-lg text-gray-600 hover:bg-[#36b6ff] transition"
               >
                 <MessageSquare className="w-4 h-4" />
               </a>
@@ -176,7 +176,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-gray-200">
+        <div className="mt-12 pt-6 border-t border-[#36b6ff]">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-gray-500 mb-2 sm:mb-0">
               &copy; 2025 Zeenopay Nepal . All rights reserved.

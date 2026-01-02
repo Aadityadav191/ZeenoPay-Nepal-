@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ReportProblem() {
+export default function Report_Problem() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-16 font-sans text-left text-slate-800">
       <h1 className="text-4xl font-extrabold mb-4">Refund Policy</h1>

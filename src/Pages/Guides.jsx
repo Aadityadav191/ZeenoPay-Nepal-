@@ -1,79 +1,145 @@
-import React from 'react';
-import { Book, Calculator, Truck, Shield, MessageCircle } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Book, Calculator, Truck, Shield, MessageCircle, ChevronRight } from 'lucide-react';
 
 export default function GuidesPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   const guideList = [
     {
       title: "Cost Calculator Guide",
       desc: "Learn to estimate total costs including duties and shipping.",
-      icon: <Calculator className="text-blue-500" />,
-      tag: "Tools"
+      icon: <Calculator className="w-6 h-6" />,
+      tag: "Tools",
+      color: "text-blue-500",
+      bgColor: "bg-blue-50"
     },
     {
       title: "Customs & Taxes",
       desc: "A simple breakdown of Nepal's import tax rules.",
-      icon: <Shield className="text-indigo-500" />,
-      tag: "Legal"
+      icon: <Shield className="w-6 h-6" />,
+      tag: "Legal",
+      color: "text-indigo-500",
+      bgColor: "bg-indigo-50"
     },
     {
       title: "Shipping Process",
       desc: "How we move your items from India to your doorstep.",
-      icon: <Truck className="text-blue-600" />,
-      tag: "Logistics"
+      icon: <Truck className="w-6 h-6" />,
+      tag: "Logistics",
+      color: "text-sky-500",
+      bgColor: "bg-sky-50"
     },
     {
       title: "Payment Help",
       desc: "Step-by-step guide to paying via eSewa, Khalti, or Bank.",
-      icon: <Book className="text-indigo-600" />,
-      tag: "Payments"
+      icon: <Book className="w-6 h-6" />,
+      tag: "Payments",
+      color: "text-violet-500",
+      bgColor: "bg-violet-50"
     }
   ];
 
+  // Animation Variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+  };
+
   return (
-    <div className="max-w-7xl mx-auto  py-5">
-     <div className="bg-white border-b mb-5">
-        <div className="max-w-5xl mx-auto px-4 py-12 text-center">
-          <h1 className="text-4xl font-bold text-[#3e8ff5] mb-4">User Guides</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-           Everything you need to know about using ZeenoPay.
-          </p>
+    <div className="min-h-screen bg-gray-50/50 pb-20">
+      {/* --- Gradient Header --- */}
+      <div className="bg-white border-b mb-10">
+        <div className="max-w-5xl mx-auto px-4 py-16 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-5xl font-extrabold mb-4"
+          >
+            User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-indigo-600">Guides</span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-gray-600 max-w-2xl mx-auto text-lg"
+          >
+            Everything you need to know about navigating international shopping and secure payments with ZeenoPay.
+          </motion.p>
         </div>
       </div>
 
-
-      <div className="grid gap-6">
-        {guideList.map((guide, i) => (
-          <div key={i} className="flex items-center p-5 bg-white border border-gray-200 rounded-2xl hover:border-blue-400 hover:bg-blue-50/30 transition-all cursor-pointer group">
-            <div className="bg-gray-100 p-3 rounded-xl group-hover:bg-white transition-colors">
-              {guide.icon}
-            </div>
-            
-            <div className="ml-5 flex-1">
-              <div className="flex items-center gap-2">
-                <h3 className="font-bold text-[#3e8ff5]">{guide.title}</h3>
-                <span className="text-[10px] bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full uppercase font-bold tracking-tighter">
-                  {guide.tag}
-                </span>
+      <div className="max-w-5xl mx-auto px-4">
+        {/* --- Interactive Guide Cards --- */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid gap-4"
+        >
+          {guideList.map((guide, i) => (
+            <motion.div
+              key={i}
+              variants={itemVariants}
+              whileHover={{ x: 10, scale: 1.01 }}
+              className="flex items-center p-6 bg-white border border-gray-100 rounded-[2rem] shadow-sm hover:shadow-md hover:border-[#36b6ff]/40 transition-all cursor-pointer group"
+            >
+              <div className={`${guide.bgColor} ${guide.color} p-4 rounded-2xl group-hover:scale-110 transition-transform`}>
+                {guide.icon}
               </div>
-              <p className="text-sm text-gray-600">{guide.desc}</p>
-            </div>
+              
+              <div className="ml-6 flex-1">
+                <div className="flex items-center gap-3 mb-1">
+                  <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#36b6ff] transition-colors">
+                    {guide.title}
+                  </h3>
+                  <span className="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full uppercase font-bold tracking-widest">
+                    {guide.tag}
+                  </span>
+                </div>
+                <p className="text-gray-500 text-sm leading-relaxed">{guide.desc}</p>
+              </div>
 
-            <div className="text-gray-400 group-hover:text-blue-500 font-bold px-2">
-              →
-            </div>
+              <div className="text-gray-300 group-hover:text-[#36b6ff] transition-colors p-2">
+                <ChevronRight size={24} />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* --- Support Footer CTA --- */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="mt-16 p-8 bg-gradient-to-r from-gray-900 to-indigo-950 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between shadow-xl relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
+          
+          <div className="relative z-10 mb-6 md:mb-0">
+            <h4 className="font-bold text-white text-xl">Still have questions?</h4>
+            <p className="text-gray-400 text-sm">Our support team in Kathmandu is online to help you.</p>
           </div>
-        ))}
-      </div>
-
-      <div className="mt-12 p-6 bg-indigo-50 rounded-2xl flex items-center justify-between">
-        <div>
-          <h4 className="font-bold text-indigo-900 text-lg">Still stuck?</h4>
-          <p className="text-indigo-700 text-sm">Our team is ready to help you manually.</p>
-        </div>
-        <button className="flex items-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-xl font-semibold hover:bg-indigo-700 transition">
-          <MessageCircle size={18} />
-          Chat Now
-        </button>
+          
+          <motion.button 
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="relative z-10 flex items-center gap-2 bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-blue-500/20 transition-all"
+          >
+            <MessageCircle size={20} />
+            Chat Now
+          </motion.button>
+        </motion.div>
       </div>
     </div>
   );

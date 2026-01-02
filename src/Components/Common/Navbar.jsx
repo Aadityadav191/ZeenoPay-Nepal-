@@ -9,9 +9,8 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="w-full font-sans bg-white shadow-lg sticky top-0 z-50">
-
-        <nav className="flex items-center justify-between px-4 sm:px-8 py-2">
+      <div className=" font-sans bg-white bg-opacity-30 backdrop-blur-sm shadow-lg sticky top-3 z-50 rounded-xl mx-auto my-2 max-w-[89rem] border-2 ">
+        <nav className="flex items-center justify-between px-4 sm:px-8 py-4">
           <NavLink
             to="/"
             className="flex items-center hover:opacity-90 transition"
@@ -23,7 +22,7 @@ export default function Navbar() {
             />
           </NavLink>
 
-          <div className="hidden lg:flex  gap-0 items-center space-x-1 font-medium text-gray-700">
+          <div className="hidden lg:flex  gap-0 items-center space-x-1 font-semibold text-gray-700">
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -112,6 +111,11 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
+            <NavLink to="/login">
+              <button className="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-lg hover:border-gray-400 hover:text-gray-900 transition duration-300">
+                Login / Register
+              </button>
+            </NavLink>
             <NavLink to="/create-order">
               <button
                 className="flex items-center gap-2 px-6 py-2.5 text-sm font-bold text-white 
@@ -131,12 +135,6 @@ export default function Navbar() {
                   />
                 </svg>
                 Create Order
-              </button>
-            </NavLink>
-
-            <NavLink to="/login">
-              <button className="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-lg hover:border-gray-400 hover:text-gray-900 transition duration-300">
-                Login / Register
               </button>
             </NavLink>
           </div>
@@ -254,8 +252,6 @@ export default function Navbar() {
                 Create Order
               </button>
             </NavLink>
-
-            
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Plus, Info, HelpCircle } from "lucide-react"; 
 
-const ProductQuoteForm = () => {
+const Createorder = () => {
   const maxChars = 500;
   const [products, setProducts] = useState([{
     id: 1, 
@@ -179,4 +179,4 @@ const ProductQuoteForm = () => {
   );
 };
 
-export default ProductQuoteForm;
+export default Createorder;
