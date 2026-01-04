@@ -1,29 +1,18 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { Zap, Settings, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  Zap,
+  ShieldCheck,
+  ArrowRight,
+  TrendingDown,
+} from "lucide-react";
+import OrderCard from "../Components/OrderCard";
+import Testimonials from "../Components/Testimonials";
 
 const Home = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-
-  const slideInLeft = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const slideInRight = {
-    hidden: { opacity: 0, x: 100 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -31,181 +20,130 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
-      <section className="flex flex-col items-center justify-center px-6 py-20 text-center md:py-32 bg-gray-50 relative overflow-x-hidden">
+    <div className="min-h-screen  overflow-x-hidden">
+      <section className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-23 bg-gray-50 relative overflow-x-hidden">
         <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
           <motion.span
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-50 rounded-full"
+            className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-gray-600 uppercase bg-[#ffffff] rounded-full shadow-md"
           >
-            Now Live in Nepal 🇳🇵
+            ⭐️ Trusted by 50,000+ shoppers
           </motion.span>
 
-          <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 md:text-7xl">
-            {/* Comes from Right Side of Full Screen */}
+          <h1 className="text-5xl font-extrabold tracking-tight text-gray-700 md:text-6xl">
             <motion.span
               className="block whitespace-nowrap"
-              initial={{ x: "100vw", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2, ease: "easeOut" }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
             >
-              Global Voting,
+              Shop Globally,
             </motion.span>
 
-            {/* Comes from Left Side of Full Screen */}
-            <motion.span
-              className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b3fe] to-indigo-600 block whitespace-nowrap"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 2, ease: "easeOut", delay: 0.1 }}
-            >
-              Local Convenience
-            </motion.span>
-
-            {/* Emoji pops in after the text settles */}
-            <motion.span
-              className="inline-block"
-              initial={{ scale: 0, rotate: -45 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{
-                delay: 1.2,
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-              }}
-            >
-             🇳🇵
-            </motion.span>
+            <span
+              className="text-transparent bg-clip-text bg-gray-700 block whitespace-nowrap">
+              Ship to <span className="text-green-500">Nepal</span>
+            </span>
           </h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="mt-8 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            transition={{ delay: 1, duration: 1 }}
+            className="mt-8 text-xl font-light  text-slate-600 max-w-5xl mx-auto leading-7"
           >
-            Bridge the gap between international platforms and Nepal. ZeenoPay
-            provides the most secure voting and payment gateway for global
-            competitions and digital services.
+            Access millions of international products and get them delivered
+            safely to your doorstep.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.8 }}
+            transition={{ delay: 0.9 }}
             className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 text-lg font-medium text-white bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-full shadow-lg"
-            >
-              Start Free Trial
-            </motion.button>
+            <OrderCard />
           </motion.div>
         </motion.div>
       </section>
 
-      <section className="px-6 py-24 max-w-6xl mx-auto">
-        <motion.h2
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="text-3xl font-bold text-center text-gray-900 mb-16"
-        >
-          Why choose us?
-        </motion.h2>
+      <section className="bg-gray-50 py-10 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Fast Delivery Card */}
+          <div className="group bg-white p-6 rounded-[24px] shadow-xl border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer">
+            <div className="bg-emerald-50 p-3 rounded-xl mb-4 shadow-sm transition-colors duration-300 group-hover:bg-emerald-500">
+              <Zap className="w-5 h-5 text-emerald-600 transition-colors duration-300 group-hover:text-white" />
+            </div>
+            <h3 className="text-lg font-bold text-slate-900 mb-1">
+              Fast Delivery
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Delivered within 7-14 days
+            </p>
+          </div>
 
-        <div className="space-y-20">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={slideInLeft}
-            className="flex flex-col md:flex-row items-center gap-12"
-          >
-            <div className="flex-1 p-8 bg-blue-50 rounded-3xl">
-              <Zap size={48} className="text-blue-500 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">
-                Lightning Fast Payments
-              </h3>
-              <p className="text-gray-600">
-                Optimized for speed so your votes and payments reflect in
-                real-time. We bridge the gap between Nepal and the global
-                market.
-              </p>
+          {/* Secure & Safe Card */}
+          <div className="group bg-white p-6 rounded-[24px] shadow-xl border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer">
+            <div className="bg-emerald-50 p-3 rounded-xl mb-4 shadow-sm transition-colors duration-300 group-hover:bg-emerald-500">
+              <ShieldCheck className="w-5 h-5 text-emerald-600 transition-colors duration-300 group-hover:text-white" />
             </div>
-            <div className="flex-1 h-64 bg-gray-100 rounded-3xl overflow-hidden flex items-center justify-center shadow-inner">
-              <img
-                src="https://media.zeenopay.com/events/voting/photo_1766562541266_advpc3.jpg"
-                alt="ZeenoPay Event"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          </motion.div>
+            <h3 className="text-lg font-bold text-slate-900 mb-1">
+              Secure & Safe
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              100% buyer protection
+            </p>
+          </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={slideInRight}
-            className="flex flex-col md:flex-row-reverse items-center gap-12"
-          >
-            <div className="flex-1 p-8 bg-indigo-50 rounded-3xl">
-              <ShieldCheck size={48} className="text-indigo-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Secure by Default</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security features included out of the box. We
-                ensure every NPR spent is tracked and protected.
-              </p>
+          {/* Best Rates Card */}
+          <div className="group bg-white p-6 rounded-[24px] shadow-xl border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer">
+            <div className="bg-emerald-50 p-3 rounded-xl mb-4 shadow-sm transition-colors duration-300 group-hover:bg-emerald-500">
+              <TrendingDown className="w-5 h-5 text-emerald-600 transition-colors duration-300 group-hover:text-white" />
             </div>
-            <div className="flex-1 h-64 bg-gray-100 rounded-3xl overflow-hidden flex items-center justify-center shadow-inner">
-              <img
-                src="https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.18.jpeg"
-                alt="ZeenoPay Event"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={slideInLeft}
-            className="flex flex-col md:flex-row items-center gap-12"
-          >
-            <div className="flex-1 p-8 bg-teal-50 rounded-3xl">
-              <Settings size={48} className="text-teal-600 mb-4" />
-              <h3 className="text-2xl font-bold mb-4">Fully Customizable</h3>
-              <p className="text-gray-600">
-                Tailor the voting experience to match your competition's brand
-                perfectly with our intuitive dashboard.
-              </p>
-            </div>
-            <div className="flex-1 h-64 bg-gray-100 rounded-3xl overflow-hidden flex items-center justify-center shadow-inner">
-              <img
-                src="https://zeenopay.s3.eu-north-1.amazonaws.com/events/registration/photo_1764430247908_6x95vw.jpeg"
-                alt="ZeenoPay Event"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-              />
-            </div>
-          </motion.div>
+            <h3 className="text-lg font-bold text-slate-900 mb-1">
+              Best Rates
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Competitive global pricing
+            </p>
+          </div>
         </div>
       </section>
 
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="px-6 py-20 bg-gray-900 text-white text-center"
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="px-6 py-5 text-sm font-semibold text-white bg-[#1e293b] rounded-xl shadow-lg text-center mx-auto my-5 block transition-all"
       >
-        <h2 className="text-3xl font-bold mb-6">Ready to get started?</h2>
-        <button className="bg-[#36b3fe] px-10 py-4 rounded-full font-bold hover:bg-white hover:text-gray-900 transition-all">
-          Join ZeenoPay Today
-        </button>
-      </motion.section>
+        Explore how it works
+        <ArrowRight className="inline-block w-4 h-4 ml-2" />
+      </motion.button>
+
+      <section className="px-6 py-20 text-white text-center">
+        <Testimonials />
+      </section>
+      <hr className=" border-gray-300 mb-10 max-w-7xl mx-auto" />
+      <section className="flex gap-10  justify-around mb-10 max-w-6xl mx-auto flex-wrap">
+        <div>
+          <h1 className="text-3xl font-bold mb-2 text-gray-900 text-center">50,000+</h1>
+          <p className="text-gray-600">Happy Customers</p>
+        </div>
+
+        <div>
+          <h1 className="text-3xl font-bold mb-2 text-gray-900 text-center">95%</h1>
+          <p className="text-gray-600">Customer Satisfaction</p>
+        </div>
+
+        <div>
+          <h1 className="text-3xl font-bold mb-2 text-gray-900 text-center">4.9/5</h1>
+          <p className="text-gray-600">Average Rating</p>
+        </div>
+
+        <div>
+          <h1 className="text-3xl font-bold mb-2 text-gray-900 text-center">24/7</h1>
+          <p className="text-gray-600">Support Available</p>
+        </div>
+      </section>
     </div>
   );
 };
