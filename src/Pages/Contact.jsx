@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   MessageCircle,
-  Phone,
   Mail,
   MapPin,
   Clock,
   ShieldCheck,
   Zap,
   Headphones,
+  Send,
+  Phone
 } from "lucide-react";
 import ContactForm from "../Components/Forms/ContactForm";
 
@@ -31,42 +32,38 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 overflow-x-hidden">
-      <section className="bg-white border-b overflow-hidden relative py-20 md:py-28">
+    <div className="min-h-screenoverflow-x-hidden">
+      <section className=" border-b overflow-hidden relative py-20 md:py-10">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <motion.h1 className="text-3xl md:text-5xl font-black tracking-tight text-gray-900 mb-6">
-            <motion.span
-              className="block"
-              initial={{ x: "100vw", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              Have Questions?
-            </motion.span>
+          <h1 className="text-3xl md:text-5xl font-black tracking-tight text-gray-700 mb-6 ">
+            Contact 
+            <span className="text-transparent bg-clip-text bg-[#20c55e]">
+              Us
+            </span>
+          </h1>
 
-            <motion.span
-              className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b3fe] to-indigo-600 block"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.1 }}
-            >
-              Contact ZeenoPay
-            </motion.span>
-          </motion.h1>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            Have questions about shipping or need assistance? We're here to help
+            you with all your international shopping needs.
+          </p>
+        </div>
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="text-gray-600 max-w-2xl mx-auto text-lg"
-          >
-            We're here to help you navigate international voting and global
-            payments with ease. Reach out to our Kathmandu-based team today.
-          </motion.p>
+        <div className=" flex justify-center items-center max-w-xl mx-auto px-10 mb-10">
+          <button className="mx-auto mt-10  border-2 hover:bg-gray-100 text-[#606b7a] px-3 py-2 rounded-xl  text-md  transition-all active:scale-95 flex items-center gap-2">
+             <Send size={15} /> Get Started Today
+          </button>
+
+          <button className="mx-auto mt-10  border-2 hover:bg-gray-100 text-[#606b7a] px-3 py-2 rounded-xl  text-md  transition-all active:scale-95 flex items-center gap-2">
+             <Phone size={15}/>Contact info
+          </button>
+
+          <button className="mx-auto mt-10  border-2 hover:bg-gray-100 text-[#606b7a] px-3 py-2 rounded-xl  text-md  transition-all active:scale-95 flex items-center gap-2">
+            <MapPin size={15}/>Visits Us 
+          </button>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 -mt-10 relative z-10 mb-20">
+      <section className="max-w-7xl mx-auto px-4 -mt-10 relative  mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
             <motion.div
@@ -74,17 +71,17 @@ const Contact = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 + 1.4 }}
+              transition={{ delay: index * 0.1 + 1.2 }}
               whileHover={{
                 y: -10,
                 boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)",
               }}
-              className="bg-white border border-gray-100 rounded-[24px] p-5 shadow-lg flex flex-col items-center justify-center text-center transition-all"
+              className="bg-white border-2 border-gray-100 rounded-[20px] p-5 flex flex-col items-center justify-center text-center transition-all"
             >
-              <h3 className="text-[30px] font-extrabold text-[#3ab5fd] mb-2 leading-none">
+              <h3 className="text-[25px] font-extrabold text-[#17a34a] mb-1 leading-none">
                 {stat.value}
               </h3>
-              <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider">
+              <p className="text-gray-700 text-sm  uppercase tracking-wider">
                 {stat.label}
               </p>
             </motion.div>
@@ -93,7 +90,7 @@ const Contact = () => {
       </section>
 
       {/* --- MAIN CONTENT: Form & Details --- */}
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 mb-20">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:space-x-8 space-y-5 md:space-y-0 mb-20">
         {/* Section 1: Contact Form */}
         <motion.section
           initial="hidden"
@@ -102,11 +99,9 @@ const Contact = () => {
           variants={fadeInUp}
           className="w-full md:w-1/2 p-8 md:p-12 text-left shadow-2xl rounded-[2.5rem] border border-gray-100 bg-white"
         >
-          <div className="flex items-center gap-4 mb-8">
-            <div className="p-3 bg-blue-50 text-blue-500 rounded-2xl">
-              <Mail size={28} />
-            </div>
-            <h2 className="text-3xl font-bold text-gray-800">Send a Message</h2>
+          <div className="items-center mb-2">
+            <h2 className="text-3xl mb-2 font-bold text-gray-800">Send a Message</h2>
+            <p>Fill in the form and we'll reach out by email or phone within one business day.</p>
           </div>
           <ContactForm />
         </motion.section>
@@ -177,31 +172,33 @@ const Contact = () => {
                 loading="lazy"
               ></iframe>
             </div>
+            <div>
+              <p className="text-sm text-gray-700 flex items-center gap-2">
+                <MapPin size={20} /> Click and drag to explore our location on the map.
+              </p>
+              <button className="mt-3 hover:bg-green-700 text-white w-full py-3 rounded-xl text-md transition-all flex items-center gap-2 bg-green-500  font-semibold flex items-center justify-center gap-2" >
+                <Send  size={20}/>Get Directions
+              </button>
+            </div>
           </div>
         </motion.section>
       </div>
 
-      <section className="max-w-7xl mx-auto px-4 py-20 text-center">
-        <h2 className="text-2xl font-bold text-gray-400 mb-12 uppercase tracking-[0.3em]">
-          Our Guarantee
-        </h2>
-        <div className="grid md:grid-cols-3 gap-12">
-          <TrustItem
-            icon={<ShieldCheck size={40} className="text-blue-500" />}
-            title="Secure Data"
-            desc="Your personal information is always encrypted."
-          />
-          <TrustItem
-            icon={<Zap size={40} className="text-yellow-500" />}
-            title="Instant Processing"
-            desc="Payments reflect in your account within seconds."
-          />
-          <TrustItem
-            icon={<Headphones size={40} className="text-green-500" />}
-            title="Live Support"
-            desc="Real humans available to help you via chat."
-          />
-        </div>
+      <section className="max-w-7xl mx-auto px-4 py-7 text-center bg-gradient-to-r from-[#1dbf5f] to-[#069868] rounded-3xl mb-10">
+          <h1 className="text-xl font-bold text-white mb-4">Need Immediate Assistance?</h1>
+          <p className="max-w-2xl mx-auto text-white mb-10">
+            If you require urgent support, please reach out to our 24/7 WhatsApp support or call us directly.
+          </p>
+
+          <div className="flex justify-center items-center mx-auto max-w-md ">
+            <button className="mx-auto border-2 bg-white hover:bg-gray-100 text-green-500 px-5 py-3 rounded-xl text-md transition-all active:scale-95 flex items-center gap-2 font-semibold">
+               <MessageCircle size={15} /> WhatsApp Support
+            </button>
+
+            <button className="mx-auto ml-5 border-2 bg-slate-100 bulred hover:bg-gray-100 text-[#606b7a] px-5 py-3 rounded-xl text-md transition-all active:scale-95 flex items-center gap-2 font-semibold">
+               <Phone size={15}/> Send Email now 
+            </button>
+          </div>
       </section>
     </div>
   );

@@ -176,7 +176,7 @@ export default function ContactForm() {
               {/* Submit Button */}
               <div className="m-4">
                 <button
-                  className="py-3 px-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:bg-indigo-600 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                  className="py-3 px-4 bg-[#20c55e] hover:bg-green-600 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
                 >
                   Send Message

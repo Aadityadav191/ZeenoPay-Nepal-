@@ -64,7 +64,7 @@ export default function Blog() {
   return (
     <main className="min-h-screen bg-[#fcfcfd] pb-20">
       {/* Header Section */}
-      <section className="relative py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden text-center">
+      <section className="relative py-10  overflow-hidden text-center">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -72,10 +72,10 @@ export default function Blog() {
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto px-4 text-center relative z-10"
         >
-          <h1 className="text-6xl font-black tracking-tight mb-2">
-            <span className="text-gray-900">Latest </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-indigo-600">
-              Articles
+          <h1 className="text-5xl font-black tracking-tight mb-2">
+            <span className="text-gray-900">Blog & </span>
+            <span className="text-transparent bg-clip-text bg-[#20c55e]">
+              Guides
             </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -83,7 +83,18 @@ export default function Blog() {
           </p>
         </motion.div>
       </section>
-
+      
+      <section>
+        <div className="relative group max-w-6xl md:w-96 ml-auto">
+            <LuSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#36b6ff] transition-colors" />
+            <input
+              type="search"
+              placeholder="Search articles..."
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="max-w-6xl pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#36b6ff]/20 transition-all outline-none text-gray-700 shadow-sm"
+            />
+          </div>
+      </section>
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-3">
         {/* Category Pills */}
         <div className="flex flex-wrap gap-3 mt-5 mb-10">
@@ -105,15 +116,7 @@ export default function Blog() {
               </button>
             )
           )}
-          <div className="relative group w-full md:w-96 ml-auto">
-            <LuSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#36b6ff] transition-colors" />
-            <input
-              type="search"
-              placeholder="Search articles..."
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#36b6ff]/20 transition-all outline-none text-gray-700 shadow-sm"
-            />
-          </div>
+          
         </div>
 
         {/* Blog Grid */}
