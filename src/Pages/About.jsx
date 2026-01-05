@@ -1,203 +1,369 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
 import {
-  ShieldCheck,
+  Target,
   Globe,
-  Users,
-  TrendingUp,
-  Award,
-  Rocket,
+  Heart,
+  BarChart3,
+  ShieldCheck,
+  Box,
+  MapPin,
+  FileText,
+  RefreshCcw,
+  Headset,
+  ArrowLeft,
+  ArrowRight,
+  Lock,
 } from "lucide-react";
 
-export default function About() {
+export default function AboutSection() {
+  const [activeTab, setActiveTab] = useState("mission");
+
+  const contentRef = useRef(null);
+
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.3 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (contentRef.current) {
+      contentRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [activeTab]);
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="relative py-24 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto px-4 text-center relative z-10"
+    <>
+      <section className="bg-white py-20 px-4 font-sans shadow-md">
+        <div className="max-w-6xl mx-auto">
+          {/*   HEADER SECTION   */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+              About <span className="text-[#20c55e]">ShipifyNepal</span>
+            </h2>
+            <p className="text-gray-500 text-lg font-medium max-w-2xl mx-auto">
+              Your trusted partner for international shopping and shipping to
+              Nepal
+            </p>
+          </div>
+
+          {/*   NAVIGATION TABS */}
+          <div className="flex flex-wrap justify-center gap-3 mb-16 text-[#20c55e]">
+            <TabBtn
+              active={activeTab === "mission"}
+              onClick={() => setActiveTab("mission")}
+              icon={<Target size={18} />}
+              label="Our Mission"
+            />
+            <TabBtn
+              active={activeTab === "services"}
+              onClick={() => setActiveTab("services")}
+              icon={<Globe size={18} />}
+              label="Services"
+            />
+            <TabBtn
+              active={activeTab === "values"}
+              onClick={() => setActiveTab("values")}
+              icon={<Heart size={18} />}
+              label="Values"
+            />
+            <TabBtn
+              active={activeTab === "stats"}
+              onClick={() => setActiveTab("stats")}
+              icon={<BarChart3 size={18} />}
+              label="Stats"
+            />
+          </div>
+
+          {/*   STATS GRID   */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+            <StatCard value="50K+" label="Customers Served" />
+            <StatCard value="7-14" label="Delivery Days" />
+            <StatCard value="98%" label="Satisfaction Rate" />
+            <StatCard value="24/7" label="Support" />
+          </div>
+        </div>
+
+        {/* Content Wrapper with Ref and Scroll-Margin */}
+        <div
+          ref={contentRef}
+          className="animate-in fade-in slide-in-from-bottom-4 duration-500 max-w-6xl mx-auto scroll-mt-10"
         >
-          <h1 className="text-6xl font-black tracking-tight mb-6">
-            <span className="text-gray-900">About</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-indigo-600">
-              {" "}
-              ZeenoPay Nepal
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            More than just a payment gateway. We are the digital bridge
-            connecting the vibrant spirit of Nepal to the global stage.
-          </p>
-        </motion.div>
+          {activeTab === "mission" && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                Our Mission
+              </h2>
+              <div className="bg-emerald-50/50 border border-emerald-100 p-6 rounded-2xl mb-6">
+                <p className="text-emerald-900 font-medium leading-relaxed">
+                  At ShipifyNepal, we're on a mission to make international
+                  shopping accessible to everyone in Nepal.
+                </p>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                We believe that geographical boundaries shouldn't limit your
+                access to the world's best products. Whether it's electronics
+                from Amazon US, fashion from UK retailers, or unique items from
+                Japanese markets, we bridge the gap between global markets and
+                your doorstep in Nepal.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex gap-4">
+                  <Globe className="text-emerald-500 shrink-0" size={20} />
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-1">
+                      Global Access
+                    </h4>
+                    <p className="text-gray-500 text-sm">
+                      Shop from any international website with ease
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <ShieldCheck
+                    className="text-emerald-500 shrink-0"
+                    size={20}
+                  />
+                  <div>
+                    <h4 className="font-bold text-slate-900 mb-1">
+                      Secure Process
+                    </h4>
+                    <p className="text-gray-500 text-sm">
+                      Your packages and payments are fully protected
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "services" && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                What We Do
+              </h2>
+              <p className="text-gray-600 leading-relaxed mb-8">
+                We provide a complete solution for shopping from international
+                websites and having your purchases delivered to your doorstep in
+                Nepal.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <ServiceCard
+                  icon={<Box className="text-  [#20c55e]" size={20} />}
+                  bg="bg-emerald-50/50"
+                  iconBg="bg-emerald-100"
+                  border="border-emerald-100"
+                  title="Package Forwarding"
+                  desc="Use our international addresses to shop from any global store, then we forward packages to Nepal."
+                />
+                <ServiceCard
+                  icon={<FileText className="text-blue-600" size={20} />}
+                  bg="bg-blue-50/30"
+                  iconBg="bg-blue-100"
+                  border="border-blue-100/50"
+                  title="Customs Clearance"
+                  desc="We handle all customs paperwork, duty calculations, and clearance procedures on your behalf."
+                />
+                <ServiceCard
+                  icon={<RefreshCcw className="text-purple-600" size={20} />}
+                  bg="bg-purple-50/30"
+                  iconBg="bg-purple-100"
+                  border="border-purple-100/50"
+                  title="Real-time Tracking"
+                  desc="Track your package from purchase to delivery with our comprehensive tracking system."
+                />
+                <ServiceCard
+                  icon={<Headset className="text-orange-600" size={20} />}
+                  bg="bg-orange-50/30"
+                  iconBg="bg-orange-100"
+                  border="border-orange-100/50"
+                  title="Dedicated Support"
+                  desc="Our customer support team assists you at every step of your international shopping journey."
+                />
+              </div>
+
+              <div className="bg-blue-50/50 border border-blue-100 p-4 rounded-xl">
+                <p className="text-sm text-blue-900 font-medium">
+                  <span className="font-bold">Transparent Pricing:</span> All
+                  costs including shipping, duties, and our service fee are
+                  calculated upfront before you confirm your order.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {activeTab === "values" && (
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                Our Values
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <ValueCard
+                  icon={<ShieldCheck className="text-emerald-500" size={20} />}
+                  title="Transparency"
+                  desc="No hidden fees. You see all costs upfront. We provide complete breakdowns of shipping, duties, and fees."
+                />
+                <ValueCard
+                  icon={<Heart className="text-blue-500" size={20} />}
+                  title="Reliability"
+                  desc="We ensure safe and timely delivery with complete tracking. Consistent 7-14 day delivery times."
+                />
+                <ValueCard
+                  icon={<Headset className="text-orange-500" size={20} />}
+                  title="Customer Support"
+                  desc="Dedicated support team available 24/7 via WhatsApp, email, and phone for all your queries."
+                />
+                <ValueCard
+                  icon={<Lock className="text-purple-500" size={20} />}
+                  title="Security"
+                  desc="Secure payments and data protection. We use bank-level encryption and comply with data standards."
+                />
+              </div>
+            </div>
+          )}
+        </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 -mt-12 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <StatCard icon={<Users />} label="Users" value="50K+" />
-          <StatCard icon={<Globe />} label="Countries" value="120+" />
-          <StatCard icon={<TrendingUp />} label="Growth" value="300%" />
-          <StatCard icon={<ShieldCheck />} label="Security" value="Level 1" />
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 py-24 space-y-32">
-        <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-16 items-center"
-        >
-          <motion.div variants={itemVariants} className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-blue-50 text-blue-600 font-bold text-xs uppercase tracking-widest">
-              <Rocket size={14} /> Our Mission
+      <section className="bg-white py-5 px-1 font-sans">
+        <div className="max-w-7xl mx-auto text-center">
+          {/*    Green Process Container    */}
+          <div className="bg-gradient-to-br from-[#1fc05f] to-emerald-700 rounded-2xl p-3 md:p-8 mb-10">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl text-center font-bold text-white mb-2">
+                Simple 3-Step Process
+              </h3>
+              <p className="text-emerald-50 opacity-90">
+                Getting started with international shopping has never been
+                easier
+              </p>
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 leading-tight">
-              Empowering the Next Generation of{" "}
-              <span className="text-blue-500">Global Voters.</span>
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              At ZeenoPay Nepal, we identified a massive gap: Nepalese fans and
-              participants in international events struggled to cast their votes
-              or pay for services. Our mission is to provide a{" "}
-              <span className="text-gray-900 font-semibold underline decoration-blue-400">
-                secure, seamless interface
-              </span>{" "}
-              that makes global participation as easy as sending a local text.
-            </p>
-          </motion.div>
 
-          <motion.div variants={itemVariants} className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-[2.5rem] blur opacity-20"></div>
-            <img
-              src="https://media.zeenopay.com/events/voting/photo_1766562541266_advpc3.jpg"
-              alt="ZeenoPay Team"
-              className="relative rounded-[2rem] shadow-2xl w-full object-cover h-[400px]"
-            />
-          </motion.div>
-        </motion.section>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              {/* Step 1 */}
+              <div className="flex flex-col items-center text-center bg-[#b2dfdb]/20 backdrop-blur-md rounded-2xl p-5  relative  border-white/30">
+                {/* The Circle: Using relative positioning with negative margin to "float" it on top */}
+                <div className="relative  mb-2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-700 font-bold text-lg shadow-md  ">
+                  1
+                </div>
 
-        <section>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-gray-900">
-              Our Core Values
-            </h2>
-            <div className="w-20 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
-          </motion.div>
+                {/* Content */}
+                <h4 className="text-white font-bold text-lg mb-1">
+                  Shop Globally
+                </h4>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <ValueCard
-              icon={<ShieldCheck className="text-green-500" />}
-              title="Integrity First"
-              desc="We handle every transaction with absolute transparency and honesty. Trust is our primary currency."
-            />
-            <ValueCard
-              icon={<Zap className="text-yellow-500" />}
-              title="Radical Innovation"
-              desc="We don't follow trends; we set them. Our tech stack is built for speed and future scalability."
-            />
-            <ValueCard
-              icon={<Award className="text-indigo-500" />}
-              title="Customer Obsession"
-              desc="Your success is our success. Our 24/7 support ensures you're never left in the dark."
-            />
+                <p className="text-white text-sm leading-relaxed max-w-2xl">
+                  Use our address to shop from any international store
+                </p>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex flex-col items-center text-center bg-[#b2dfdb]/20 backdrop-blur-md rounded-2xl p-5  relative  border-white/30">
+                {/* The Circle: Using relative positioning with negative margin to "float" it on top */}
+                <div className="relative  mb-2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-700 font-bold text-lg shadow-md  ">
+                  2
+                </div>
+
+                {/* Content */}
+                <h4 className="text-white font-bold text-lg mb-3">
+                  We Handle Everything
+                </h4>
+
+                <p className="text-white text-sm leading-relaxed max-w-2xl">
+                  Use our address to shop from any international store
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col items-center text-center bg-[#b2dfdb]/20 backdrop-blur-md rounded-2xl p-5  relative  border-white/30">
+                {/* The Circle: Using relative positioning with negative margin to "float" it on top */}
+                <div className="relative  mb-2 w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-700 font-bold text-lg shadow-md  ">
+                  3
+                </div>
+
+                {/* Content */}
+                <h4 className="text-white font-bold text-lg mb-3">
+                  Deliver to You
+                </h4>
+
+                <p className="text-white text-sm leading-relaxed max-w-2xl">
+                  Use our address to shop from any international store
+                </p>
+              </div>
+            </div>
           </div>
-        </section>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          className="bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-[3rem] p-12 text-center text-white shadow-2xl relative overflow-hidden"
-        >
-          <div className="relative z-10">
-            <h2 className="text-4xl font-bold mb-6">
-              Revolutionizing Digital Nepal Since 2020
-            </h2>
-            <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-              Whether you're an organizer looking for a voting partner or an
-              individual wanting to participate globally, ZeenoPay is your
-              gateway.
-            </p>
-            <button className="bg-white text-indigo-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all active:scale-95">
-              Contact Our Team
-            </button>
+          {/*    Footer CTA    */}
+          <div className="space-y-8 mb-5">
+            <h3 className="text-lg  text-gray-500">
+              Ready to start shopping internationally?
+            </h3>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-emerald-400 to-[#20c55e] hover:from-emerald-500 hover:to-emerald-700 text-white px-8 py-3 rounded-xl font-bold text-lg shadow-md  transition-all active:scale-95">
+                Get Started Today
+              </button>
+
+              <button className="flex items-center gap-2 px-8  rounded-xl border border-gray-300 text-  [#20c55e] font-bold hover:bg-emerald-50 transition-all">
+                <ArrowLeft size={20} />
+                Back to Top
+              </button>
+            </div>
           </div>
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
-        </motion.div>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 }
 
-function StatCard({ icon, label, value }) {
-  return (
-    <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100 text-center flex flex-col items-center">
-      <div className="text-blue-500 mb-2">
-        {React.cloneElement(icon, { size: 24 })}
-      </div>
-      <div className="text-2xl font-bold text-gray-900">{value}</div>
-      <div className="text-xs text-gray-400 font-bold uppercase tracking-widest">
-        {label}
-      </div>
-    </div>
-  );
-}
+/*   Sub-Components   */
 
-function ValueCard({ icon, title, desc }) {
-  return (
-    <motion.div
-      whileHover={{ y: -10 }}
-      className="p-8 bg-gray-50 rounded-3xl border border-transparent hover:border-blue-200 transition-all duration-300"
+const TabBtn = ({ active, label, icon, onClick }) => (
+  <button
+    onClick={onClick}
+    className={`flex items-center gap-2 px-6 py-2.5 rounded-full border transition-all font-semibold text-sm
+    ${
+      active
+        ? "bg-[#20c55e] border-[#20c55e] text-white shadow-lg shadow-emerald-200"
+        : "bg-white border-gray-200 text-gray-600 hover:border-emerald-200 hover:bg-emerald-50/30"
+    }`}
+  >
+    {icon} {label}
+  </button>
+);
+
+const StatCard = ({ value, label }) => (
+  <div className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+    <h3 className="text-3xl font-black text-[#20c55e] mb-1">{value}</h3>
+    <p className="text-gray-500 text-xs font-bold uppercase tracking-wider">
+      {label}
+    </p>
+  </div>
+);
+
+// Added missing ServiceCard component
+const ServiceCard = ({ icon, title, desc, bg, iconBg, border }) => (
+  <div className={`${bg} ${border} p-6 rounded-2xl border flex flex-col gap-4`}>
+    <div
+      className={`${iconBg} w-10 h-10 rounded-lg flex items-center justify-center`}
     >
-      <div className="bg-white w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm mb-6">
+      {icon}
+    </div>
+    <div>
+      <h4 className="font-bold text-slate-900 mb-2">{title}</h4>
+      <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+    </div>
+  </div>
+);
+
+// Added missing ValueCard component
+const ValueCard = ({ icon, title, desc }) => (
+  <div className="bg-gray-50/50 p-6 rounded-2xl border border-gray-100">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-white p-2 rounded-lg shadow-sm border border-gray-100">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 leading-relaxed text-sm">{desc}</p>
-    </motion.div>
-  );
-}
-
-const Zap = ({ size, className }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-  </svg>
+      <h4 className="font-bold text-slate-900">{title}</h4>
+    </div>
+    <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+  </div>
 );
