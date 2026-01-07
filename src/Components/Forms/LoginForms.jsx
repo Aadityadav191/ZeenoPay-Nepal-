@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import viteLogo from "../../assets/vite.jpeg";
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -55,30 +54,28 @@ export default function LoginForms() {
   };
 
   const getInputClass = (fieldName) => {
-    return `border rounded-lg px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
+    return `border rounded-lg px-4 py-3 mt-1 mb-5 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
       errors[fieldName]
         ? "border-red-500 focus:border-red-500 focus:ring-red-200"
-        : "border-gray-200 focus:border-indigo-500 focus:ring-blue-500"
+        : "border-gray-200 focus:border-green-500 focus:ring-green-500"
     }`;
   };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-          <img
-            className="mx-auto w-16 h-auto mb-5 rounded-full"
-            src={viteLogo}
-            alt="Zeenopay Logo"
-          />
-          <div className="relative px-4 py-5 bg-[#f7fafc] mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-            <div className="max-w-md mx-auto">
-              <h1 className="font-bold text-3xl text-indigo-500">
-                Sign in to Zeenopay
-              </h1>
-            </div>
+        <div className="relative py-2 sm:max-w-xl sm:mx-auto">
+          <div>
+            <h1 className="text-center  text-4xl font-extrabold text-gray-600 m-6">
+              Welcome to <span className="text-green-500">ShipifyNepal</span>
+            </h1>
+            <p className=" text-center text-gray-600 mb-5 max-w-lg mx-auto">
+              Sign in to access your account and start shopping internationally
+            </p>
+          </div>
+          <div className="relative px-4 py-5 bg-[#f7fafc] mx-5 md:mx-0 shadow rounded-3xl sm:p-5">
             <div>
-              <div className="mt-5">
+              <div className="mt-3 text-left">
                 <label
                   className="font-semibold text-l text-gray-600 pb-1 block text-left"
                   htmlFor="email"
@@ -106,9 +103,9 @@ export default function LoginForms() {
                 >
                   Password
                 </label>
-                <div className="relative">
+                <div className="relative mb-2">
                   <input
-                    className={`${getInputClass("password")} pr-16`} 
+                    className={`${getInputClass("password")} pr-16`}
                     type={showpassword ? "text" : "password"}
                     placeholder="*******"
                     id="password"
@@ -119,7 +116,7 @@ export default function LoginForms() {
                   <button
                     type="button"
                     onClick={() => hidepassword(!showpassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-blue-500"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-500"
                   >
                     {showpassword ? "Hide" : "Show"}
                   </button>
@@ -130,26 +127,26 @@ export default function LoginForms() {
                   </p>
                 )}
               </div>
-              <div className="text-right mb-3">
+              <div className="text-right mb-7">
                 <a
-                  className="text-l font-display font-semibold text-gray-500 hover:text-indigo-600 cursor-pointer"
+                  className="text-l font-display font-semibold text-gray-500 hover:text-green-600 cursor-pointer"
                   href="#"
                 >
                   Forgot Password?
                 </a>
               </div>
-              <div className="mt-1 mb-4">
+              <div className="mt-1 mb-5">
                 <button
-                  className="py-2 px-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                  className="py-2 px-4 bg-gradient-to-r from-[#20c55e] to-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
                 >
                   Sign in
                 </button>
               </div>
-              <span className="text-center block">------ OR ------</span>
+              <span className="text-center block p-3">------ OR ------</span>
               <div className="flex justify-center w-full items-center mt-2">
                 <div>
-                  <button className="flex items-center justify-center py-2 px-20 bg-white hover:bg-gray-200 focus:ring-blue-500 focus:ring-offset-blue-200 text-gray-700 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
+                  <button className="flex items-center justify-center py-2 px-20 bg-white hover:bg-gray-200 focus:ring-green-500 focus:ring-offset-green-200 text-gray-700 w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg">
                     <FcGoogle size={25} />
                     <span className="ml-2">Sign in with Google</span>
                   </button>
@@ -160,7 +157,7 @@ export default function LoginForms() {
                   Don't have an account ?
                 </span>
                 <Link to="/signup">
-                  <a className="text-m font-bold px-2 text-indigo-500   hover:underline text-center">
+                  <a className="text-m font-bold px-2 text-green-500   hover:underline text-center">
                     Register
                   </a>
                 </Link>
@@ -170,7 +167,7 @@ export default function LoginForms() {
           <div className="mt-8 text-center">
             <a
               href="/"
-              className="text-blue-500 hover:text-blue-700 font-medium transition-colors"
+              className="text-green-500 hover:text-green-700 font-medium transition-colors"
             >
               &larr; Return to Homepage
             </a>

@@ -11,28 +11,47 @@ export default function Blog() {
   const blogs = [
     {
       id: 1,
-      category: "Market",
+      category: "Shipping Guide",
       title: "Industry Insights & Strategic Trends",
       content:
-        "Explore the latest developments shaping the global market. Our in-depth analysis provides strategic context.",
+        "Explore the latest developments shaping the global Shipping Guide. Our in-depth analysis provides strategic context.",
       image:
         "https://cdn.britannica.com/94/494-050-A674AD3A/Fallow-deer-dama-dama.jpg",
       date: "Oct 24, 2025",
     },
     {
       id: 2,
-      category: "Growth",
-      title: "The Art of Professional Growth",
+      category: "Customs & Duties",
+      title: "The Art of Professional Customs & Duties",
       content:
         "Unlock your potential with actionable tips on leadership and communication in today's fast-paced environment.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfmO3DtNHLYfE-BrAptQTtC0ZmleZsacnraw&s",
       date: "Oct 22, 2025",
     },
-    // ... add 'category' and 'date' fields to your other blog objects
     {
       id: 5,
-      category: "Beauty Pageant",
+      category: "Cost Saving",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://i.ibb.co/xKN83YjM/Screenshot-2026-01-01-at-02-13-59.png",
+      date: "Oct 15, 2025",
+    },
+     {
+      id: 6,
+      category: "Cost Saving",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1000",
+      date: "Oct 15, 2025",
+    },
+     {
+      id: 7,
+      category: "Shipping Guide",
       title: "The Future of Digital Transformation",
       content:
         "Navigating the shift toward AI-integrated systems in international voting platforms.",
@@ -40,6 +59,57 @@ export default function Blog() {
         "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
       date: "Oct 15, 2025",
     },
+     {
+      id: 8,
+      category: "Cost Saving",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000",
+      date: "Oct 15, 2025",
+    },
+     {
+      id: 9,
+      category: "Customs & Duties",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
+      date: "Oct 15, 2025",
+    },
+     {
+      id: 10,
+      category: "Shipping Guide",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
+      date: "Oct 15, 2025",
+    },
+     {
+      id: 11,
+      category: "Customs & Duties",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
+      date: "Oct 15, 2025",
+    },
+     {
+      id: 12,
+      category: "Cost Saving",
+      title: "The Future of Digital Transformation",
+      content:
+        "Navigating the shift toward AI-integrated systems in international voting platforms.",
+      image:
+        "https://media.zeenopay.com/WhatsApp%20Image%202025-04-23%20at%2001.23.20.jpeg",
+      date: "Oct 15, 2025",
+    },
+
   ];
 
   useEffect(() => {
@@ -62,62 +132,75 @@ export default function Blog() {
   const displayedBlogs = filteredBlogs.slice(start, start + perPage);
 
   return (
-    <main className="min-h-screen bg-[#fcfcfd] pb-20">
+    <main className="min-h-screen pb-20 max-w-7xl mx-auto overflow-x-hidden">
       {/* Header Section */}
-      <section className="relative py-10  overflow-hidden text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto px-4 text-center relative z-10"
-        >
+      <section className="relative py-10 mb-4 overflow-hidden text-center">
+        <div className="max-w-2xl mx-auto px-4 text-center relative z-10">
           <h1 className="text-5xl font-black tracking-tight mb-2">
-            <span className="text-gray-900">Blog & </span>
+            <span className="text-gray-700">Blog & </span>
             <span className="text-transparent bg-clip-text bg-[#20c55e]">
               Guides
             </span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Insights, tutorials, and the latest news from the world of ZeenoPay.
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Insights, tutorials, and guides for international shopping and
+            shipping to Nepal
           </p>
-        </motion.div>
+        </div>
       </section>
-      
-      <section>
-        <div className="relative group max-w-6xl md:w-96 ml-auto">
-            <LuSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#36b6ff] transition-colors" />
-            <input
-              type="search"
-              placeholder="Search articles..."
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="max-w-6xl pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-[#36b6ff]/20 transition-all outline-none text-gray-700 shadow-sm"
-            />
-          </div>
+
+      <section className="flex  items-center  gap-3 max-w-7xl mx-auto px-6 md:px-12 lg:px-3">
+        <div className="relative group w-full">
+          <LuSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#1da24b] transition-colors" />
+          <input
+            type="search"
+            placeholder="Search articles..."
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full pl-12 pr-4 py-3  border-2 rounded-2xl focus:ring-2 focus:ring-[#36b6ff]/20 transition-all outline-none text-gray-700 shadow-sm focus:border-[#20c55e]"
+          />
+        </div>
+        <div>
+          <button className=" flex items-center gap-2 text-white bg-green-500 hover:bg-green-600 border border-gray-100 px-8 py-3 font-semibold rounded-xl transition-all active:scale-95">
+            <LuFilter />
+            Filter
+          </button>
+        </div>
       </section>
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-3">
         {/* Category Pills */}
-        <div className="flex flex-wrap gap-3 mt-5 mb-10">
-          {["All", "Beauty Pageant", "Fashion", "Growth", "Market"].map(
-            (cat) => (
-              <button
-                key={cat}
-                onClick={() => {
-                  setActiveCategory(cat);
-                  setPage(1);
-                }}
-                className={`px-6 py-2 rounded-lg text-sm font-bold transition-all ${
-                  activeCategory === cat
-                    ? "bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white shadow-lg shadow-blue-200"
-                    : "bg-white text-gray-500 hover:bg-gray-100 border border-gray-100"
-                }`}
-              >
-                {cat}
-              </button>
-            )
-          )}
-          
+        <div className="flex flex-wrap gap-3 mt-5 mb-6">
+          {[
+            "All",
+            "Shipping Guide",
+            "Customs & Duties",
+            "Shopping Tips",
+            "Cost Saving",
+            "Company",
+            "Seasonal",
+          ].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => {
+                setActiveCategory(cat);
+                setPage(1);
+              }}
+              className={`px-5 py-2 rounded-full text-sm transition-all ${
+                activeCategory === cat
+                  ? "bg-green-600 text-white shadow-lg"
+                  : "bg-white text-gray-900 hover:bg-gray-100 border border-gray-100"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
+
+        <div className="mb-8 text-gray-500 font-small ">
+          Showing {filteredBlogs.length}{" "}
+          {filteredBlogs.length === 1 ? "article" : "articles"}
+        </div>
+
 
         {/* Blog Grid */}
         <motion.section
@@ -150,9 +233,10 @@ export default function Blog() {
         {/* Empty State */}
         {displayedBlogs.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-gray-400 text-lg">
-              No articles found matching your criteria.
-            </p>
+            <h1 className="text-gray-700 text-xl font-semibold mb-4">
+              No articles found.
+            </h1>
+            <p>Try a different search term or category</p>
           </div>
         )}
 

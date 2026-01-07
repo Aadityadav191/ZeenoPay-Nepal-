@@ -3,7 +3,6 @@ import AppRouter from "./router/AppRouter";
 import CookieConsent from "./Components/CookieConsent";
 import "./App.css";
 
-
 export default function App() {
   const [showCookie, setShowCookie] = useState(false);
 
