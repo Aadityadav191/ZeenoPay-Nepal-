@@ -8,7 +8,7 @@ export default function App() {
 
   useEffect(() => {
     // Hide loader after 2 seconds
-    setTimeout(() => setIsLoading(false), 2000);
+    setTimeout(() => setIsLoading(false), 1500);
 
     // Show cookie after 5 seconds
     setTimeout(() => setShowCookie(true), 5000);

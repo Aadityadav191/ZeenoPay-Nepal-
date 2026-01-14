@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import FloatingCircle from "../Components/FloatingCircle";
+import Bgicons from "../Components/Bgicons";
 import {
   Zap,
   ShieldCheck,
@@ -48,6 +49,7 @@ const Home = () => {
                 Ship to <span className="text-green-500">Nepal</span>
               </span>
             </h1>
+            <Bgicons className="absolute top-200 left-50 w-10 text-green-200 opacity-50 animate-floatSlow" />
 
             <motion.p
               initial={{ opacity: 0 }}
@@ -87,8 +89,10 @@ const Home = () => {
               <OrderCard />
             </motion.div>
           </motion.div>
-        </section>
+                       <Bgicons className="absolute top-200 right-50 w-10 text-green-200 opacity-50 animate-floatSlow" />
 
+        </section>
+        <Bgicons className="absolute top-20 left-20 w-10 text-green-200 opacity-40 animate-floatSlow" />
         <section className="bg-gray-50 py-10 px-4 ">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
             {/* Fast Delivery Card */}
@@ -140,10 +144,11 @@ const Home = () => {
             <ArrowRight className="inline-block w-4 h-4 ml-2" />
           </motion.button>
         </section>
-
+        <Bgicons className="absolute bottom-20 right-72 w-28 text-green-200 opacity-20 animate-floatFast"  />
         <section className="px-6 py-10 text-white text-center bg-[#f9fafb] relative overflow-x-hidden">
           <Testimonials />
         </section>
+        <Bgicons className="absolute top-20 left-20 w-10 text-green-200 opacity-40 animate-floatSlow" />
         <hr className=" border-gray-300 mb-10 max-w-7xl mx-auto" />
         <section className="flex gap-10  justify-around mb-10 max-w-6xl mx-auto flex-wrap ">
           <div>
@@ -152,7 +157,7 @@ const Home = () => {
             </h1>
             <p className="text-gray-600">Happy Customers</p>
           </div>
-
+          <Bgicons className="absolute top-96 left-64 w-14 text-green-200 opacity-30 animate-floatMedium" />
           <div>
             <h1 className="text-3xl font-bold mb-2 text-gray-900 text-center">
               95%
