@@ -13,32 +13,32 @@ export default function GuidesPage() {
       desc: "Learn to estimate total costs including duties and shipping.",
       icon: <Calculator className="w-6 h-6" />,
       tag: "Tools",
-      color: "text-blue-500",
-      bgColor: "bg-blue-50"
+      color: "text-green-500",
+      bgColor: "bg-green-50"
     },
     {
       title: "Customs & Taxes",
       desc: "A simple breakdown of Nepal's import tax rules.",
       icon: <Shield className="w-6 h-6" />,
       tag: "Legal",
-      color: "text-indigo-500",
-      bgColor: "bg-indigo-50"
+      color: "text-green-500",
+      bgColor: "bg-green-50"
     },
     {
       title: "Shipping Process",
       desc: "How we move your items from India to your doorstep.",
       icon: <Truck className="w-6 h-6" />,
       tag: "Logistics",
-      color: "text-sky-500",
-      bgColor: "bg-sky-50"
+      color: "text-green-500",
+      bgColor: "bg-green-50"
     },
     {
       title: "Payment Help",
       desc: "Step-by-step guide to paying via eSewa, Khalti, or Bank.",
       icon: <Book className="w-6 h-6" />,
       tag: "Payments",
-      color: "text-violet-500",
-      bgColor: "bg-violet-50"
+      color: "text-green-500",
+      bgColor: "bg-green-50"
     }
   ];
 
@@ -66,7 +66,7 @@ export default function GuidesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl font-extrabold mb-4"
           >
-            User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-indigo-600">Guides</span>
+            User <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#5ace67] to-green-600">Guides</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -100,7 +100,7 @@ export default function GuidesPage() {
               
               <div className="ml-6 flex-1">
                 <div className="flex items-center gap-3 mb-1">
-                  <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#36b6ff] transition-colors">
+                  <h3 className="font-bold text-gray-900 text-lg group-hover:text-[#379e1a] transition-colors">
                     {guide.title}
                   </h3>
                   <span className="text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full uppercase font-bold tracking-widest">
@@ -122,7 +122,7 @@ export default function GuidesPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 bg-gradient-to-r from-gray-900 to-indigo-950 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between shadow-xl relative overflow-hidden"
+          className="mt-16 p-8 bg-gradient-to-r from-green-500 to-green-650 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between shadow-xl relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
           
@@ -134,7 +134,7 @@ export default function GuidesPage() {
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative z-10 flex items-center gap-2 bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-blue-500/20 transition-all"
+            className="relative z-10 flex items-center gap-2 bg-gradient-to-r from-[#298e1e] to-green-600 text-white px-8 py-3.5 rounded-full font-bold shadow-lg shadow-green-500/20 transition-all"
           >
             <MessageCircle size={20} />
             Chat Now

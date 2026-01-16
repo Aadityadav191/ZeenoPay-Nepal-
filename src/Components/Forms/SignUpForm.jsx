@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import viteLogo from "../../assets/vite.jpeg";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import viteLogo from "../../assets/vite.jpeg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SignUpForm() {
   const [formData, setFormData] = useState({
@@ -75,7 +75,7 @@ export default function SignUpForm() {
     setErrors(newErrors);
 
     if (isValid) {
-       toast.success(`Account Created Successfully ${formData.fullName}`);
+      toast.success(`Account Created Successfully ${formData.fullName}`);
     }
     setFormData({
       fullName: "",
@@ -90,7 +90,7 @@ export default function SignUpForm() {
     return `border rounded-lg px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
       errors[fieldName]
         ? "border-red-500 focus:border-red-500 focus:ring-red-200"
-        : "border-gray-200 focus:border-blue-500 focus:ring-blue-500"
+        : "border-gray-200 focus:border-green-500 focus:ring-green-500"
     }`;
   };
 
@@ -98,17 +98,17 @@ export default function SignUpForm() {
     <>
       <form onSubmit={handleSubmit}>
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-          <img
-            className="mx-auto w-16 h-auto mb-5 rounded-full"
-            src={viteLogo}
-            alt="Zeenopay Logo"
-          />
-          <div className="relative px-4 py-5 bg-[#f7fafc] mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-            <div className=" mx-auto">
-              <h1 className="font-bold text-3xl text-indigo-500">
-                Sign Up for Zeenopay
+          
+           <div className=" mx-auto mt-5">
+              <h1 className="font-bold text-4xl text-center mb-4 ">
+                Join <span className="text-green-500"> ShipifyNepal</span>
               </h1>
+              <p className="text-center text-gray-600 mb-5 max-w-md ">
+               Create your account to start shopping from international stores 
+              </p>
             </div>
+          <div className="relative px-4 py-5 bg-[#f7fafc] mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
+           
             <div>
               <div className="mt-5">
                 <label
@@ -150,29 +150,29 @@ export default function SignUpForm() {
                     {errors.email}
                   </p>
                 )}
-<div className="relative">
-                <label
-                  className="font-semibold text-l text-gray-600 pb-1 block text-left"
-                  htmlFor="password"
-                >
-                  Create Password
-                </label>
-                <input
-                  className={`${getInputClass("password")} pr-16`} 
-                  type={showpassword ? "text" : "password"}
-                  placeholder="*******"
-                  id="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                />
-                 <button
+                <div className="relative">
+                  <label
+                    className="font-semibold text-l text-gray-600 pb-1 block text-left"
+                    htmlFor="password"
+                  >
+                    Create Password
+                  </label>
+                  <input
+                    className={`${getInputClass("password")} pr-16`}
+                    type={showpassword ? "text" : "password"}
+                    placeholder="*******"
+                    id="password"
+                    value={formData.password}
+                    onChange={handleChange}
+                  />
+                  <button
                     type="button"
                     onClick={() => setShowpassword(!showpassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-blue-500"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-sm text-green-500"
                   >
                     {showpassword ? "Hide" : "Show"}
                   </button>
-                  </div>
+                </div>
                 {errors.password && (
                   <p className="text-left text-red-500 text-xs mt-1 ml-2 mb-4">
                     {errors.password}
@@ -215,7 +215,7 @@ export default function SignUpForm() {
 
               <div className="mt-1 mb-4">
                 <button
-                  className="py-2 px-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 hover:bg-blue-700 focus:ring-blue-500 focus:ring-offset-blue-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                  className="py-2 px-4 bg-gradient-to-r from-[#3c9f55] to-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                   type="submit"
                 >
                   Create Account
@@ -227,17 +227,17 @@ export default function SignUpForm() {
                   Already a member ?
                 </span>
                 <Link to="/login">
-                  <a className="text-m text-indigo-500 font-bold px-2  hover:underline text-center">
+                  <a className="text-m text-green-500 font-bold px-2  hover:underline text-center">
                     Sign in here
                   </a>
                 </Link>
               </div>
             </div>
           </div>
-           <div className="mt-5 text-center">
+          <div className="mt-5 text-center">
             <a
               href="/"
-              className="text-blue-500 hover:text-blue-700 font-medium transition-colors"
+              className="text-green-500 hover:text-green-700 font-medium transition-colors"
             >
               &larr; Return to Homepage
             </a>

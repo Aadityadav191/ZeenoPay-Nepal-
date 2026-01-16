@@ -38,7 +38,7 @@ const Createorder = () => {
     <>
       <div className="bg-white border-b mb-10 ">
         <div className="max-w-7xl mx-auto px-4 py-12 text-center">
-          <h1 className="text-4xl font-bold text-[#3e8ff5] mb-4">Create a concierge order </h1>
+          <h1 className="text-4xl font-bold text-[#4aab61] mb-4">Create a concierge order </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Share your item links or prices and we'll purchase, ship, and deliver to Nepal. You'll see a quote before paying.
           </p>
@@ -50,7 +50,7 @@ const Createorder = () => {
           {products.map((product, index) => (
             <div key={product.id} className="bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 mb-6">
               <header className="mb-6">
-                <span className="text-[10px] font-bold tracking-[0.2em] text-indigo-600 uppercase">
+                <span className="text-[10px] font-bold tracking-[0.2em] text-green-600 uppercase">
                   Item {index + 1}
                 </span>
               </header>
@@ -164,7 +164,7 @@ const Createorder = () => {
                 <Plus size={16} /> Add Product
               </button>
               <div className="relative group">
-                <button className="bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-8 py-2.5 rounded-full text-[11px] font-bold uppercase transition-all shadow-lg shadow-indigo-100">
+                <button className="bg-gradient-to-r from-[#388d4f] to-green-600 text-white px-8 py-2.5 rounded-full text-[11px] font-bold uppercase transition-all shadow-lg shadow-green-100">
                   Submit order request
                 </button>
                 <span className="absolute -bottom-6 right-0 w-max text-[10px] text-amber-500 font-medium opacity-80">
