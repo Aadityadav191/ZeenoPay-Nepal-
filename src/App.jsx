@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
 import AppRouter from "./router/AppRouter";
-import CookieConsent from "./Components/CookieConsent";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [showCookie, setShowCookie] = useState(false);
 
   useEffect(() => {
     // Hide loader after 2 seconds
     setTimeout(() => setIsLoading(false), 1500);
-
-    // Show cookie after 5 seconds
-    setTimeout(() => setShowCookie(true), 5000);
   }, []);
 
   // 1. Loading Screen
@@ -33,7 +28,6 @@ export default function App() {
   return (
     <>
       <AppRouter />
-      {showCookie && <CookieConsent />}
     </>
   );
 }

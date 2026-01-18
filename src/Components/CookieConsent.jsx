@@ -30,7 +30,7 @@ export default function CookieConsent() {
           animate={{ y: 0, opacity: 1 }}   
           exit={{ y: 100, opacity: 0 }}    
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="fixed bottom-0 left-0 right-0 z-[100] bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.2)] flex flex-col md:flex-row items-center justify-between border-t border-white/10"
+          className="fixed bottom-0 left-0 right-0 z-[100] bg-gradient-to-r from-[#187f3c] to-green-600 text-white p-6 shadow-[0_-10px_40px_rgba(0,0,0,0.2)] flex flex-col md:flex-row items-center justify-between border-t border-white/10 "
         >
           <div className="flex items-center gap-4 mb-4 md:mb-0 md:mr-8">
             <div className="hidden md:block bg-white/20 p-2 rounded-full">
@@ -54,7 +54,7 @@ export default function CookieConsent() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={acceptCookies}
-              className="bg-white text-indigo-600 px-8 py-2.5 rounded-full font-bold text-sm shadow-lg transition-shadow hover:shadow-indigo-500/20"
+              className="bg-white text-green-600 px-8 py-2.5 rounded-full font-bold text-sm shadow-lg transition-shadow hover:shadow-green-500/20"
             >
               Accept All
             </motion.button>
