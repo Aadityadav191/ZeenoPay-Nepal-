@@ -54,7 +54,7 @@ export default function LoginForms() {
   };
 
   const getInputClass = (fieldName) => {
-    return `border rounded-lg px-4 py-3 mt-1 mb-5 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
+    return `border rounded-lg px-4 py-3 mt-1 mb-1 text-sm w-full focus:ring-2 bg-[#f7fafc] outline-none transition-all ${
       errors[fieldName]
         ? "border-red-500 focus:border-red-500 focus:ring-red-200"
         : "border-gray-200 focus:border-green-500 focus:ring-green-500"
@@ -64,20 +64,12 @@ export default function LoginForms() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="relative py-2 sm:max-w-xl sm:mx-auto">
-          <div>
-            <h1 className="text-center  text-4xl font-extrabold text-gray-600 m-6">
-              Welcome to <span className="text-green-500">ShipifyNepal</span>
-            </h1>
-            <p className=" text-center text-gray-600 mb-5 max-w-lg mx-auto">
-              Sign in to access your account and start shopping internationally
-            </p>
-          </div>
-          <div className="relative px-4 py-5 bg-[#f7fafc] mx-5 md:mx-0 shadow rounded-3xl sm:p-5">
+        <div className="relative sm:max-w-xl sm:mx-auto">
+          <div className="relative px-4 py-5 bg-[#f7fafc] mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
             <div>
-              <div className="mt-3 text-left">
+              <div className="text-left">
                 <label
-                  className="font-semibold text-l text-gray-600 pb-1 block text-left"
+                  className="font-semibold text-l text-gray-600 pb-1 block text-left "
                   htmlFor="email"
                 >
                   Email Address
@@ -92,18 +84,18 @@ export default function LoginForms() {
                 />
 
                 {errors.email && (
-                  <p className="text-left text-red-500 text-xs mt-1 ml-2 mb-4">
+                  <p className="text-left text-red-500 text-xs  ml-2 mb-4">
                     {errors.email}
                   </p>
                 )}
 
                 <label
-                  className="font-semibold text-l text-gray-600 pb-1 block text-left"
+                  className="font-semibold text-l text-gray-600 pb-1 block text-left mb"
                   htmlFor="password"
                 >
                   Password
                 </label>
-                <div className="relative mb-2">
+                <div className="relative mb-1">
                   <input
                     className={`${getInputClass("password")} pr-16`}
                     type={showpassword ? "text" : "password"}
@@ -122,7 +114,7 @@ export default function LoginForms() {
                   </button>
                 </div>
                 {errors.password && (
-                  <p className="text-left text-red-500 text-xs mt-1 ml-2 mb-4">
+                  <p className="text-left text-red-500 text-xs  ml-2">
                     {errors.password}
                   </p>
                 )}

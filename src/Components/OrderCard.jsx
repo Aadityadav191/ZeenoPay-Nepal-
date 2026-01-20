@@ -14,7 +14,7 @@ const OrderCard = () => {
   ];
 
   return (
-    <div className="min-h-20 bg-gray-50 flex items-center justify-center p-4 ">
+    <div className="flex items-center justify-center p-4 ">
       <div className="w-full max-w-6xl bg-white rounded-3xl shadow-2xl border border-gray-100 p-8 md:p-12 ">
         {/* Header */}
         <div className="mb-5 text-left">

@@ -25,8 +25,8 @@ const Home = () => {
 
   return (
     <>
-      <main className="min-h-screen  overflow-x-hidden">
-        <section className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-23 bg-[#f9fafb] relative overflow-x-hidden">
+      <main className="min-h-screen  overflow-x-hidden bg-gradient-to-br from-[#fcfefd] to-[#dde6e1]">
+        <section className="flex flex-col items-center justify-center px-6 py-10 text-center md:py-23   relative overflow-x-hidden">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
             <motion.span
               initial={{ opacity: 0, y: -20 }}
@@ -93,7 +93,7 @@ const Home = () => {
 
         </section>
         <Bgicons className="absolute top-20 left-20 w-10 text-green-200 opacity-40 animate-floatSlow" />
-        <section className="bg-gray-50 py-10 px-4 ">
+        <section className=" py-10 px-4 ">
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
             {/* Fast Delivery Card */}
             <div className="group bg-white p-6 rounded-[24px] shadow-xl border border-gray-100 flex flex-col items-start transition-all duration-300 hover:-translate-y-1 hover:shadow-md cursor-pointer">
@@ -145,7 +145,7 @@ const Home = () => {
           </motion.button>
         </section>
         <Bgicons className="absolute bottom-20 right-72 w-28 text-green-200 opacity-20 animate-floatFast"  />
-        <section className="px-6 py-10 text-white text-center bg-[#f9fafb] relative overflow-x-hidden">
+        <section className="px-6 py-10 text-white text-center   relative overflow-x-hidden">
           <Testimonials />
         </section>
         <Bgicons className="absolute top-20 left-20 w-10 text-green-200 opacity-40 animate-floatSlow" />

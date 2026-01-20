@@ -97,20 +97,10 @@ export default function SignUpForm() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-          
-           <div className=" mx-auto mt-5">
-              <h1 className="font-bold text-4xl text-center mb-4 ">
-                Join <span className="text-green-500"> ShipifyNepal</span>
-              </h1>
-              <p className="text-center text-gray-600 mb-5 max-w-md ">
-               Create your account to start shopping from international stores 
-              </p>
-            </div>
+        <div className="relative sm:max-w-xl sm:mx-auto">
           <div className="relative px-4 py-5 bg-[#f7fafc] mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-           
             <div>
-              <div className="mt-5">
+              <div >
                 <label
                   className="font-semibold text-l text-gray-600 pb-1 block text-left"
                   htmlFor="fullName"

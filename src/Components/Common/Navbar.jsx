@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../../assets/Logo.jpeg";
-import { Moon, SunMoon } from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 
 
 
@@ -147,7 +147,7 @@ export default function Navbar() {
               </button>
             </NavLink>
             <button onClick={handleTheme} className="px-6 py-2.5 text-sm font-semibold text-gray-700 border border-gray-200 rounded-xl hover:border-gray-400 hover:text-gray-900 transition duration-300">
-                {theme ? <SunMoon size={18} /> : <Moon size={18} />}
+                {theme ? <Sun size={18} /> : <Moon size={18} />}
               </button>
           </div>
 
