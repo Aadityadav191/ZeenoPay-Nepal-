@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const EXCHANGE_RATE = 1.65;
 const SHIPPING_PER_KG = 298.32;
@@ -32,10 +33,19 @@ export default function Calculator() {
     `NPR ${num.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
 
   return (
+    <>
+     <Helmet>
+        <title>ShipifyNepal - Landed Cost Calculator</title>
+        <meta
+          name="description"
+          content="Calculate your landed cost with ShipifyNepal's easy-to-use calculator. Get accurate estimates for duties, shipping, and total costs before you order."
+        />
+      </Helmet>
+
     <main className=" min-h-screen bg-gray-50 ">
       <div className="bg-white border-b mb-10 ">
         <div className="max-w-5xl mx-auto px-4 py-12 text-center">
-          <h1 className="text-4xl font-bold text-[#3e8ff5] mb-4">Estimate Your Landed Cost </h1>
+          <h1 className="text-4xl font-bold text-[#20c55e] mb-4">Estimate Your Landed Cost </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
            Enter your item details to see duties, shipping, and fees before you
           order.
@@ -100,7 +110,7 @@ export default function Calculator() {
             <div className="flex justify-end">
               <button
                 onClick={() => setShowEstimate(true)}
-                className="bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition"
+                className="bg-gradient-to-r from-[#33d672] to-green-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:opacity-90 transition"
               >
                 Get estimate
               </button>
@@ -112,7 +122,7 @@ export default function Calculator() {
           <h2 className="text-2xl font-bold">Estimate</h2>
 
           {!showEstimate ? (
-            <div className="bg-indigo-50 p-5 rounded-xl text-center border">
+            <div className="bg-green-50 p-5 rounded-xl text-center border">
               <p className="text-gray-500 text-sm ">
                 Calculate to see the delivered total in NPR.
               </p>
@@ -120,7 +130,7 @@ export default function Calculator() {
           ) : (
             <>
               <div className="bg-[#bbcef5] p-6 rounded-2xl text-center">
-                <p className="text-xs font-bold text-indigo-600 mb-2">
+                <p className="text-xs font-bold text-green-600 mb-2">
                   ESTIMATED TOTAL
                 </p>
                 <h1 className="text-4xl font-extrabold">
@@ -145,6 +155,7 @@ export default function Calculator() {
         </div>
       </div>
     </main>
+    </>
   );
 }
 

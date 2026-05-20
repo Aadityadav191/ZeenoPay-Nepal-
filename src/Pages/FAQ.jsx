@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
   Mail, 
   ShieldCheck, 
@@ -9,11 +10,18 @@ import {
   Search,
   CheckCircle2
 } from "lucide-react";
+import { i } from "framer-motion/client";
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <>
+    <Helmet>
+      <title>ShipifyNepal - FAQ</title>
+      <meta name="description" content="Frequently asked questions about ZeenoPay's services and features." />
+    </Helmet>
+
     <div className="border border-slate-100 rounded-2xl bg-white overflow-hidden mb-4 shadow-sm transition-all hover:shadow-md">
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -46,6 +54,7 @@ const FAQItem = ({ question, answer }) => {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 };
 
@@ -83,7 +92,7 @@ const FAQ = () => {
           className="max-w-4xl mx-auto px-6 py-16 text-center"
         >
           <h1 className="text-5xl font-black mb-4">
-            Zeenopay <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-indigo-600">Support</span>
+            Zeenopay <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-green-600">Support</span>
           </h1>
           <p className="text-slate-500 text-lg">
             Find answers to common questions or reach out to our team.
@@ -158,7 +167,7 @@ const FAQ = () => {
                 ></textarea>
                 <button
                   onClick={() => alert("Issue reported. Our team will contact you soon.")}
-                  className="w-full bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/20 hover:scale-[1.02] active:scale-95 transition-all"
+                  className="w-full bg-gradient-to-r from-[#36b6ff] to-green-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/20 hover:scale-[1.02] active:scale-95 transition-all"
                 >
                   Submit Report
                 </button>

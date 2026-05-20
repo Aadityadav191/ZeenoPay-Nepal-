@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function BlogDetails() {
   const { id } = useParams();
@@ -70,11 +71,19 @@ const blogs = [
   if (!blog) return <p>Blog not found</p>;
 
   return (
-    <main className="px-6 md:px-24 py-10">
-      <button
-        onClick={() => window.history.back()}
-        className="mb-6 text-blue-500 hover:underline"
-      >
+    <>
+      <Helmet>
+        <title>ShipifyNepal - {blog.title}</title>
+        <meta
+          name="description"
+          content={blog.content.substring(0, 160)}
+        />
+      </Helmet>
+      <main className="px-6 md:px-24 py-10">
+        <button
+          onClick={() => window.history.back()}
+          className="mb-6 text-blue-500 hover:underline"
+        >
         &larr; Back to Blogs
       </button>
       <img src={blog.image} alt={blog.title} className="w-full h-96 object-cover rounded-lg" />
@@ -85,5 +94,6 @@ const blogs = [
         {blog.content}
       </p>
     </main>
+    </>
   );
 }

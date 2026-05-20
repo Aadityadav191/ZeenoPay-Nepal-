@@ -14,6 +14,7 @@ import {
   ArrowRight,
   Lock,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function AboutSection() {
   const [activeTab, setActiveTab] = useState("mission");
@@ -32,6 +33,13 @@ export default function AboutSection() {
 
   return (
     <>
+      <Helmet>
+        <title>ShipifyNepal - About Us</title>
+        <meta
+          name="description"
+          content="Learn about ShipifyNepal's mission, services, and values. Your trusted partner for international shopping and shipping to Nepal."
+        />
+      </Helmet>
       <section className="bg-white py-20 px-4 font-sans shadow-md">
         <div className="max-w-6xl mx-auto">
           {/*   HEADER SECTION   */}

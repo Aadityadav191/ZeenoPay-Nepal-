@@ -30,7 +30,7 @@ export default function SignUpForm() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     let isValid = true;
@@ -84,6 +84,22 @@ export default function SignUpForm() {
       confirmPassword: "",
       newsletter: false,
     });
+
+
+    try {
+      const response = await fetch("http://localhost:5000/Crediantial", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log("API response:", data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   const getInputClass = (fieldName) => {

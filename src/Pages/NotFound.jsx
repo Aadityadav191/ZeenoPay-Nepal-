@@ -6,7 +6,7 @@ export default function NotFound() {
     <>
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4">
         <div className="bg-white p-3 rounded-lg shadow-md text-center">
-          <h1 className="text-6xl font-bold text-indigo-600 mb-4 rounded-lg ">404</h1>
+          <h1 className="text-6xl font-bold text-green-600 mb-4 rounded-lg ">404</h1>
         </div>
         
         <p className="text-xl text-gray-700 mb-8">
@@ -15,7 +15,7 @@ export default function NotFound() {
         <Link to="/">
         <button
           type="submit"
-          class="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-indigo-400 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+          class="flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-green-400 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
         >
           Go Back Home
           <svg

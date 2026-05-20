@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Cards from "../Components/Cards";
 import { LuFilter, LuSearch, LuArrowRight } from "react-icons/lu";
+import { Helmet } from "react-helmet-async";
 
 export default function Blog() {
   const [page, setPage] = useState(1);
@@ -132,6 +133,15 @@ export default function Blog() {
   const displayedBlogs = filteredBlogs.slice(start, start + perPage);
 
   return (
+
+    <>
+<Helmet>
+        <title>ShipifyNepal - Blog</title>
+        <meta
+          name="description"
+          content="Stay updated with the latest news, tips, and guides for international shopping and shipping to Nepal."
+        />
+      </Helmet>
     <main className="min-h-screen pb-20 max-w-7xl mx-auto overflow-x-hidden">
       {/* Header Section */}
       <section className="relative py-10 mb-4 overflow-hidden text-center">
@@ -277,5 +287,6 @@ export default function Blog() {
         )}
       </div>
     </main>
+    </>
   );
 }

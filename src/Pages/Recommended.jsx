@@ -106,7 +106,7 @@ export default function Recommended() {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-indigo-100 transition-all border border-transparent hover:border-gray-200"
+              className="flex items-center justify-between p-4 bg-gray-50 rounded-xl hover:bg-green-100 transition-all border border-transparent hover:border-gray-200"
             >
               <div className="flex items-center gap-4  ">
                 <img
@@ -127,7 +127,7 @@ export default function Recommended() {
           ))}
         </div>
 
-        <div className="mt-8 p-4 bg-gradient-to-r from-[#36b6ff] to-indigo-600 rounded-xl text-white text-center">
+        <div className="mt-8 p-4 bg-gradient-to-r from-[#36b6ff] to-green-600 rounded-xl text-white text-center">
           <p className="text-xs opacity-80 uppercase font-bold">Merchant Hub</p>
           <p className="text-sm mt-1 mb-3">Accept Zeenopay on your site.</p>
           <button className="bg-white text-blue-600 text-sm font-bold px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">

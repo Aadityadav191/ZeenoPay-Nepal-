@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { 
   ArrowLeft, 
   Box, 
@@ -22,6 +23,11 @@ const Return_Refunds = () => {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>ShipifyNepal - Returns & Refunds</title>
+      <meta name="description" content="Learn about our return and refund policies, including how to start a return and what items are eligible." />
+    </Helmet>
     <div className="bg-[#fcfcfd] min-h-screen pb-20">
       {/* --- Gradient Header Section --- */}
       <div className="bg-white border-b overflow-hidden">
@@ -34,7 +40,7 @@ const Return_Refunds = () => {
             Customer Protection
           </span>
           <h1 className="text-5xl font-black mb-6">
-            Returns & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-indigo-600">Refunds</span>
+            Returns & <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36b6ff] to-green-600">Refunds</span>
           </h1>
           <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
             We want you to love what you ordered. If you're not completely satisfied, 
@@ -53,7 +59,7 @@ const Return_Refunds = () => {
             desc="Keep original tags and packaging." 
           />
           <StepCard 
-            icon={<Mail className="text-indigo-500" />} 
+            icon={<Mail className="text-green-500" />} 
             step="02" 
             title="Start Request" 
             desc="Contact us with your order ID." 
@@ -108,7 +114,7 @@ const Return_Refunds = () => {
               </div>
 
               <div className="space-y-10">
-                <section className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl border border-blue-100 relative overflow-hidden group">
+                <section className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-3xl border border-blue-100 relative overflow-hidden group">
                   <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
                     <RefreshCcw size={80} />
                   </div>
@@ -144,7 +150,7 @@ const Return_Refunds = () => {
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-[#36b6ff] to-indigo-600 text-white px-10 py-4 rounded-full font-bold shadow-lg shadow-blue-500/20 transition-all flex items-center gap-2 group"
+                className="bg-gradient-to-r from-[#36b6ff] to-green-600 text-white px-10 py-4 rounded-full font-bold shadow-lg shadow-blue-500/20 transition-all flex items-center gap-2 group"
               >
                 Start My Return
                 <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -164,6 +170,7 @@ const Return_Refunds = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

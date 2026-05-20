@@ -42,7 +42,7 @@ export default function AppRouter() {
         </Route>
 
         {/* Pages WITHOUT Navbar & Footer */}
-        <Route element={<AuthLayout />}>
+        <Route  element={<AuthLayout />}>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />

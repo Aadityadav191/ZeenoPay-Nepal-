@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+
 import {
   MessageCircle,
   Mail,
@@ -12,6 +13,7 @@ import {
   Phone
 } from "lucide-react";
 import ContactForm from "../Components/Forms/ContactForm";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   useEffect(() => {
@@ -32,6 +34,14 @@ const Contact = () => {
   ];
 
   return (
+    <>
+     <Helmet>
+        <title>ShipifyNepal - Contact Us</title>
+        <meta
+          name="description"
+          content="Get in touch with ShipifyNepal for any questions or assistance with your international shopping needs."
+        />
+      </Helmet>
     <div className="min-h-screenoverflow-x-hidden">
       <section className=" border-b overflow-hidden relative py-20 md:py-10">
         <div className="max-w-5xl mx-auto px-4 text-center">
@@ -147,8 +157,8 @@ const Contact = () => {
           </div>
 
           {/* Business Hours Box */}
-          <div className="p-5 bg-indigo-50/50 rounded-2xl border border-indigo-100 flex items-start gap-4 mb-10">
-            <Clock className="text-indigo-600 mt-1" size={20} />
+          <div className="p-5 bg-green-50/50 rounded-2xl border border-green-100 flex items-start gap-4 mb-10">
+            <Clock className="text-green-600 mt-1" size={20} />
             <p className="text-sm text-gray-600 leading-relaxed">
               <span className="font-bold text-gray-900 block">
                 Support Hours
@@ -201,6 +211,7 @@ const Contact = () => {
           </div>
       </section>
     </div>
+    </>
   );
 };
 

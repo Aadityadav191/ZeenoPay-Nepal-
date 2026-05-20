@@ -74,7 +74,7 @@ export default function ContactForm() {
     if (errors[fieldName]) {
       return "border rounded-lg px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200";
     }
-    return "border rounded-lg px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-blue-500";
+    return "border rounded-lg px-5 py-3 mt-1 text-sm w-full bg-[#f7fafc] outline-none transition-all border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-blue-500";
   };
 
   return (

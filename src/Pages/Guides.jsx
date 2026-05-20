@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Book, Calculator, Truck, Shield, MessageCircle, ChevronRight } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
 
 export default function GuidesPage() {
   useEffect(() => {
@@ -57,6 +58,12 @@ export default function GuidesPage() {
   };
 
   return (
+    <>
+    <Helmet>
+      <title>ShipifyNepal - User Guides</title>
+      <meta name="description" content="Comprehensive guides for navigating international shopping and secure payments with ZeenoPay." />
+    </Helmet>
+
     <div className="min-h-screen bg-gray-50/50 pb-20">
       {/* --- Gradient Header --- */}
       <div className="bg-white border-b mb-10">
@@ -142,5 +149,6 @@ export default function GuidesPage() {
         </motion.div>
       </div>
     </div>
+    </>
   );
 }
