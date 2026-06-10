@@ -4,6 +4,7 @@ import Footer from "../Components/Common/Footer";
 import ScrollToTop from "../Components/ScrollToTop";
 import { useEffect ,useState} from 'react';
 import CookieConsent from "../Components/CookieConsent";
+import Whatsup from "../Components/Whatsup";
 
 export default function MainLayout() {
     const [showCookie, setShowCookie] = useState(false);
@@ -15,6 +16,7 @@ export default function MainLayout() {
     <>
       <Navbar />
       <ScrollToTop />
+      <Whatsup />
       <Outlet />
       {showCookie && <CookieConsent />}
       <Footer />

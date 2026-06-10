@@ -32,7 +32,7 @@ const ScrollToTop = () => {
         className={`
           ${isVisible ? "opacity-100" : "opacity-0"}
           bg-green-600 hover:bg-green-700 text-white font-bold p-4 rounded-full shadow-lg 
-          transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-green-400
+          transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-green-400 animate-bounce-slow
         `}
         aria-label="Back to top"
       >
